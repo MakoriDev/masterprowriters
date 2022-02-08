@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/slick/slick.css') }}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
 </head>
 
@@ -79,26 +80,20 @@ Fixed Navigation
 
             <div class="collapse navbar-collapse" id="navigation">
                 <ul class="navbar-nav ml-auto text-center">
-                    <li class="nav-item dropdown active">
-                        <a class="nav-link" href="#">Homepage</a>
+                    <li class="nav-item {{ Route::is('site-root') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('site-root') }}">Homepage</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">About Us</a>
+                    <li class="nav-item {{ Route::is('about-us') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Services</a>
+                    <li class="nav-item {{ Route::is('services') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('services') }}">Services</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Portfolio</a>
+                    <li class="nav-item {{ Route::is('order.create') ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('order.create') }}">Order Now</a>
                     </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Team</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Contact</a>
+                    <li class="nav-item {{ Route::is('feedback.create') ? 'active' : '' }}">
+                        <a class="nav-link " href="{{ route('feedback.create') }}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -162,8 +157,8 @@ End Fixed Navigation
         </div> <!-- end container -->
     </div>
     <div class="footer-bottom">
-        <h5>Copyright 2016. All rights reserved.</h5>
-        <h6>Design and Developed by <a href="">Themefisher</a></h6>
+        <h5>&copy; {{ date('Y') }}. All rights reserved.</h5>
+        <h6>Design and Developed by <a href="#">FoBo Technologies</a></h6>
     </div>
 </footer> <!-- end footer -->
 
@@ -177,9 +172,6 @@ Essential Scripts
 =====================================-->
 <!-- Main jQuery -->
 <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-<!-- Google Map -->
-{{--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>--}}
-{{--<script src="{{ asset('plugins/google-map/gmap.js') }}"></script>--}}
 
 <!-- Form Validation -->
 <script src="{{ asset('plugins/form-validation/jquery.form.js') }}"></script>
@@ -200,6 +192,7 @@ Essential Scripts
 
 <!-- Custom js -->
 <script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/utility-functions.js') }}"></script>
 
 @yield('js')
 

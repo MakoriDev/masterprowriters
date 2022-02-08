@@ -1,0 +1,57 @@
+.bg-custom{
+    background: #28ABE3;
+    color: white;
+}
+
+.contact-form select:hover{
+    border-color: #28ABE3;
+}
+
+.required{
+    color: red;
+}
+
+.custom-file-button:hover{
+    border-color: #28ABE3;
+}
+
+.avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #28ABE3;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar:hover{
+    color: red;
+    /* height: 45px;
+    width: 45px; */
+}
+
+#remove-file:hover{
+    cursor: pointer;
+    color: red;
+}
+
+button[type="submit"]{
+    cursor: pointer;
+}
+
+button[type="submit"]:disabled{
+    cursor: not-allowed;
+}
+
+.form-control.is-invalid{
+    background-image: none;
+}
+
+.form-control.is-valid{
+    background-image: none;
+}
+
+

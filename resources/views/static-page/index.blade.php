@@ -5,7 +5,7 @@
 @section('hero-slider')
     <div class="hero-slider">
         <div class="slider-item th-fullpage hero-area"
-             style="background-image: url({{ asset('images/slider/slider-bg-1.jpg') }});">
+            style="background-image: url({{ asset('images/slider/slider-bg-1.jpg') }});">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center">
@@ -22,7 +22,8 @@
                             <div class="card-header">
                                 <h4><i class="fas fa-calculator mr-2"></i>Calculate The Price</h4>
                             </div>
-                            <form id="contact-form" method="post" role="form">
+                            <form method="post" role="form" action="{{ route('redirect-order') }}">
+                                @csrf
                                 <div class="card-body">
 
                                     <div class="form-group">
@@ -32,35 +33,54 @@
                                         </select>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="pages">Pages:</label>
-                                        <select name="pages" id="pages" class="form-control">
-                                            <option>--Select Number of Pages--</option>
-                                        </select>
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="pages">Pages:</label>
+                                                <select name="pages" id="pages" class="form-control">
+                                                    <option>--Select Number of Pages--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="spacing">Spacing:</label>
+                                                <select name="spacing" id="spacing" class="form-control">
+                                                    <option value="double">Double</option>
+                                                    <option value="single">Single</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="spacing">Spacing:</label>
-                                        <select name="spacing" id="spacing" class="form-control">
-                                            <option value="single">Single</option>
-                                            <option value="double">Double</option>
-                                        </select>
+
+                                    <div class="form-row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="level">Select Level:</label>
+                                                <select name="level" id="level" class="form-control">
+                                                    <option value="high school">High School</option>
+                                                    <option value="college">College</option>
+                                                    <option value="masters">Masters</option>
+                                                    <option value="phd">PhD</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="deadline">Choose Deadline:</label>
+                                                <select name="deadline" id="deadline" class="form-control">
+                                                    <option value="12 hours">12 hours</option>
+                                                    <option value="24 hours">1 day</option>
+                                                    <option value="48 hours">2 days</option>
+                                                    <option value="72 hours">3 days</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div id="order-summary" class="font-weight-bold h5 text-danger">Total Cost: <span></span></div>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label for="spacing">Select Level:</label>
-                                        <select name="spacing" id="spacing" class="form-control">
-                                            <option value="high school">High School</option>
-                                            <option value="college">College</option>
-                                            <option value="masters">Masters</option>
-                                            <option value="phd">PhD</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="spacing">Choose Deadline:</label>
-                                        <input type="datetime-local" class="form-control">
-                                    </div>
                                 </div>
 
                                 <div class="card-footer">
@@ -143,8 +163,8 @@
     </section> <!-- End section -->
 
     <!--
-    Start About Section
-    ==================================== -->
+                        Start About Section
+                        ==================================== -->
     <section class="about-2 section" id="about">
         <div class="container">
             <div class="row">
@@ -183,8 +203,8 @@
     </section> <!-- End section -->
 
     <!--
-    Start Call To Action
-    ==================================== -->
+                        Start Call To Action
+                        ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
@@ -194,13 +214,13 @@
                         consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
                     <a href="" class="btn btn-main">Contact Us</a>
                 </div>
-            </div>        <!-- End row -->
-        </div>    <!-- End container -->
-    </section>   <!-- End section -->
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End section -->
 
     <!--
-            Start Counter Section
-            ==================================== -->
+                                Start Counter Section
+                                ==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -261,12 +281,12 @@
                     </div>
                 </div>
                 <!-- end fourth count item -->
-            </div>        <!-- end row -->
-        </div>    <!-- end container -->
-    </section>   <!-- end section -->
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section> <!-- end section -->
 
     <!-- Start Testimonial
-    =========================================== -->
+                        =========================================== -->
 
     <section class="testimonial section" id="testimonial">
         <div class="container">
@@ -346,10 +366,10 @@
                         </div>
                         <!-- /testimonial single -->
                     </div>
-                </div>        <!-- end col lg 12 -->
-            </div>        <!-- End row -->
-        </div>       <!-- End container -->
-    </section>    <!-- End Section -->
+                </div> <!-- end col lg 12 -->
+            </div> <!-- End row -->
+        </div> <!-- End container -->
+    </section> <!-- End Section -->
 
     <!--Start Blog Section-->
 
@@ -372,7 +392,7 @@
                     <div class="post-item">
                         <div class="media-wrapper">
                             <img src="{{ asset('images/blog/post-1.jpg') }}" alt="amazing caves coverimage"
-                                 class="img-fluid">
+                                class="img-fluid">
                         </div>
 
                         <div class="content">
@@ -391,7 +411,7 @@
                     <div class="post-item">
                         <div class="media-wrapper">
                             <img src="{{ asset('images/blog/post-2.jpg') }}" alt="amazing caves coverimage"
-                                 class="img-fluid">
+                                class="img-fluid">
                         </div>
 
                         <div class="content">
@@ -410,7 +430,7 @@
                     <div class="post-item">
                         <div class="media-wrapper">
                             <img src="{{ asset('images/blog/post-3.jpg') }}" alt="amazing caves coverimage"
-                                 class="img-fluid">
+                                class="img-fluid">
                         </div>
 
                         <div class="content">
@@ -430,28 +450,61 @@
 
 @section('js')
     <script>
-        $(document).ready(function(){
-            //Make Ajax call and populate paper type dropdown
-            $.ajax({
-                url: '{{ route('get-paper-type') }}',
-                type: 'GET',
-                dataType: 'json',
-                success: function (data){
-                    data.forEach(paperType => {
-                        $('select[name="paper_type"]').append(`<option value="${paperType}">${paperType}</option>`)
-                    })
-                }
-            });
+        $(document).ready(function() {
+            populatePaperType('{{ route('get-paper-type') }}')
+            populatePages()
 
+            const priceUrl = '{{ route('get-price') }}'
 
-            //Populate number of pages drop down
-            for(i =  1; i<=200; i++)
-            {
-                $('select[name="pages"]').append(`<option value="${i}"> ${i} pages/ ${i * 275} words</option>`);
-            }
+            getOrderPrice(priceUrl)
+
+            $('#spacing').on('change', function() {
+                const spacing = $(this).val()
+                const selectedPage = parseInt($('#pages').val())
+                populatePages(spacing, selectedPage)
+                getOrderPrice(priceUrl)
+            })
+
+            $('#pages').on('change', function() {
+                getOrderPrice(priceUrl)
+            })
+
+            $('#level').on('change', function() {
+                getOrderPrice(priceUrl)
+            })
+
+            $('#deadline').on('change', function() {
+                getOrderPrice(priceUrl)
+            })
 
 
         });
+
+
+        function getOrderPrice(url) {
+            const spacing = $("#spacing").val();
+            const numberOfPages = $("#pages").val();
+            const level = $("#level").val();
+            const deadline = $("#deadline").val();
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                },
+                data: {
+                    level,
+                    deadline,
+                    numberOfPages,
+                    spacing,
+                },
+                async: true,
+                dataType: "json",
+                success(response) {
+                    $("#order-summary span").text(`$ ${response.price.toFixed(2)}`);
+                },
+            });
+        }
     </script>
 @endsection
-
