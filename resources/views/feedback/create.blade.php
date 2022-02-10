@@ -30,7 +30,7 @@
                 </div>
             @endif
             <div class="row">
-                
+
                 <div class="col-12">
                     <div class="title text-center">
                         <h2>Get In Touch</h2>
@@ -124,7 +124,7 @@
                         </div>
 
                         <div id="cf-submit">
-                            <input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+                            <input type="submit" class="btn btn-custom" value="Submit">
                         </div>
 
                     </form>

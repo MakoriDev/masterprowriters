@@ -43,10 +43,19 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
+
+                    @if (session()->get('success'))
+                        <div class="alert alert-success alert-sm alert-dismissible fade show" role="alert">
+                            <h5>{{ session()->get('success') }}</h5>
+                            <button type="button" class="btn close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
                 </div>
 
 
-                <div class="contact-form col-md-8">
+                <div class="col-md-8">
                     <div class="card">
                         <div class="card-header bg-custom">
                             Order Details
@@ -160,7 +169,7 @@
 
                                 </div>
 
-                                <button type="submit" id="contact-submit" class="btn btn-transparent">Place Order</button>
+                                <button type="submit" class="btn btn-custom">Place Order</button>
 
                             </form>
                         </div>
@@ -269,6 +278,8 @@
                 }
                 orderFormData.delete('files[]');
 
+                console.log(orderForm.attr('action'));
+
                 $.ajax({
                     url: orderForm.attr('action'),
                     type: orderForm.attr('method'),
@@ -278,51 +289,60 @@
                     async: true,
                     dataType: "json",
                     success(response) {
-                        $('button[type="submit"]').html('Place Order');
-                        $('button[type="submit"]').prop('disabled', false);
+                        if (response.message === 'success') {
+                            $('button[type="submit"]').html('Place Order');
+                            $('button[type="submit"]').prop('disabled', false);
 
-                        clearAllInputErrors([{
-                                name: 'emailError',
-                                type: 'input'
-                            },
-                            {
-                                name: 'paperTypeError',
-                                type: 'select'
-                            },
-                            {
-                                name: 'spacingError',
-                                type: 'select'
-                            },
-                            {
-                                name: 'styleError',
-                                type: 'select'
-                            },
-                            {
-                                name: 'levelError',
-                                type: 'select'
-                            },
-                            {
-                                name: 'pagesError',
-                                type: 'select'
-                            },
-                            {
-                                name: 'deadlineError',
-                                type: 'select'
-                            },
-                            {
-                                name: 'filteredFilesError',
-                                type: 'input'
-                            }
-                        ])
+                            $('#successMessage').removeClass('d-none');
+                            $('#successMessage p').text('Order placed successfully.')
+                            $('#errorMessage').addClass('d-none');
+
+
+                            clearAllInputErrors([{
+                                    name: 'emailError',
+                                    type: 'input'
+                                },
+                                {
+                                    name: 'paperTypeError',
+                                    type: 'select'
+                                },
+                                {
+                                    name: 'spacingError',
+                                    type: 'select'
+                                },
+                                {
+                                    name: 'styleError',
+                                    type: 'select'
+                                },
+                                {
+                                    name: 'levelError',
+                                    type: 'select'
+                                },
+                                {
+                                    name: 'pagesError',
+                                    type: 'select'
+                                },
+                                {
+                                    name: 'deadlineError',
+                                    type: 'select'
+                                },
+                                {
+                                    name: 'filteredFilesError',
+                                    type: 'input'
+                                }
+                            ])
+                        }
+
                         console.log(response)
-                        // let url = `${response.redirectUrl}?number=${response.number}`;
-                        // location.reload();
-                        // window.location.href = url;
+                        let url = `${response.redirectUrl}?number=${response.number}`;
+                        location.reload();
+                        window.location.href = url;
 
 
 
                     },
                     error(response) {
+                        console.log(response);
                         $('button[type="submit"]').html('Place Order');
                         $('button[type="submit"]').prop('disabled', false);
                         $('#successMessage').addClass('d-none');
@@ -330,116 +350,119 @@
                         $('#errorMessage p').text(
                             'Please make sure that all required fields are filled.')
 
+                        if (response.responseJSON.errors !== 'undefined') {
+                            if (response.responseJSON.errors.email) {
+                                addInputError({
+                                    name: 'emailError',
+                                    message: response.responseJSON.errors.email,
+                                    type: 'input'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'emailError',
+                                    type: 'input'
+                                })
+                            }
 
-                        if (response.responseJSON.errors.email) {
-                            addInputError({
-                                name: 'emailError',
-                                message: response.responseJSON.errors.email,
-                                type: 'input'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'emailError',
-                                type: 'input'
-                            })
+                            if (response.responseJSON.errors.paper_type) {
+                                addInputError({
+                                    name: 'paperTypeError',
+                                    message: response.responseJSON.errors.paper_type,
+                                    type: 'select'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'paperTypeError',
+                                    type: 'select'
+                                })
+                            }
+
+
+                            if (response.responseJSON.errors.spacing) {
+                                addInputError({
+                                    name: 'spacingError',
+                                    message: response.responseJSON.errors.spacing,
+                                    type: 'select'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'spacingError',
+                                    type: 'select'
+                                })
+                            }
+
+
+                            if (response.responseJSON.errors.style) {
+                                addInputError({
+                                    name: 'styleError',
+                                    message: response.responseJSON.errors.style,
+                                    type: 'select'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'styleError',
+                                    type: 'select'
+                                })
+                            }
+
+
+                            if (response.responseJSON.errors.level) {
+                                addInputError({
+                                    name: 'levelError',
+                                    message: response.responseJSON.errors.level,
+                                    type: 'select'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'levelError',
+                                    type: 'select'
+                                })
+                            }
+
+
+                            if (response.responseJSON.errors.pages) {
+                                addInputError({
+                                    name: 'pagesError',
+                                    message: response.responseJSON.errors.pages,
+                                    type: 'select'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'pagesError',
+                                    type: 'select'
+                                })
+                            }
+
+
+
+                            if (response.responseJSON.errors.deadline) {
+                                addInputError({
+                                    name: 'deadlineError',
+                                    message: response.responseJSON.errors.deadline,
+                                    type: 'select'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'deadlineError',
+                                    type: 'select'
+                                })
+                            }
+
+                            if (response.responseJSON.errors.filteredFiles) {
+                                addInputError({
+                                    name: 'filteredFilesError',
+                                    message: response.responseJSON.errors.filteredFiles,
+                                    type: 'input'
+                                })
+                            } else {
+                                clearInputError({
+                                    name: 'filteredFilesError',
+                                    type: 'input'
+                                })
+                            }
                         }
 
-                        if (response.responseJSON.errors.paper_type) {
-                            addInputError({
-                                name: 'paperTypeError',
-                                message: response.responseJSON.errors.paper_type,
-                                type: 'select'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'paperTypeError',
-                                type: 'select'
-                            })
-                        }
 
-
-                        if (response.responseJSON.errors.spacing) {
-                            addInputError({
-                                name: 'spacingError',
-                                message: response.responseJSON.errors.spacing,
-                                type: 'select'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'spacingError',
-                                type: 'select'
-                            })
-                        }
-
-
-                        if (response.responseJSON.errors.style) {
-                            addInputError({
-                                name: 'styleError',
-                                message: response.responseJSON.errors.style,
-                                type: 'select'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'styleError',
-                                type: 'select'
-                            })
-                        }
-
-
-                        if (response.responseJSON.errors.level) {
-                            addInputError({
-                                name: 'levelError',
-                                message: response.responseJSON.errors.level,
-                                type: 'select'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'levelError',
-                                type: 'select'
-                            })
-                        }
-
-
-                        if (response.responseJSON.errors.pages) {
-                            addInputError({
-                                name: 'pagesError',
-                                message: response.responseJSON.errors.pages,
-                                type: 'select'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'pagesError',
-                                type: 'select'
-                            })
-                        }
-
-
-
-                        if (response.responseJSON.errors.deadline) {
-                            addInputError({
-                                name: 'deadlineError',
-                                message: response.responseJSON.errors.deadline,
-                                type: 'select'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'deadlineError',
-                                type: 'select'
-                            })
-                        }
-
-                        if (response.responseJSON.errors.filteredFiles) {
-                            addInputError({
-                                name: 'filteredFilesError',
-                                message: response.responseJSON.errors.filteredFiles,
-                                type: 'input'
-                            })
-                        } else {
-                            clearInputError({
-                                name: 'filteredFilesError',
-                                type: 'input'
-                            })
-                        }
 
                     }
                 })
@@ -449,17 +472,17 @@
             })
         })
 
-        function updateFieldsUsingSessionValues(){
-            @if(Session::has('paperType'))
+        function updateFieldsUsingSessionValues() {
+            @if (Session::has('paperType'))
                 $('select[name="paper_type"]').val("{{ session('paperType') }}")
             @endif
 
-            @if(Session::has('spacing'))
+            @if (Session::has('spacing'))
                 $('select[name="spacing"]').val("{{ session('spacing') }}")
             @endif
 
 
-            @if(Session::has('pages'))
+            @if (Session::has('pages'))
                 const spacing = $('select[name="spacing"]').val()
                 const pages = parseInt("{{ session('pages') }}")
 
@@ -467,11 +490,11 @@
             @endif
 
 
-             @if(Session::has('level'))
+            @if (Session::has('level'))
                 $('select[name="level"]').val("{{ session('level') }}")
             @endif
 
-             @if(Session::has('deadline'))
+            @if (Session::has('deadline'))
                 $('select[name="deadline"]').val("{{ session('deadline') }}")
             @endif
         }
@@ -521,7 +544,5 @@
             $(`#${input.name} strong`).text(input.message);
             $(`#${input.name}`).siblings(`${input.type}`).addClass('is-invalid');
         }
-
-
     </script>
 @endsection

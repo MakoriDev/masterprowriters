@@ -1,0 +1,185 @@
+SIOMO-FW(config)# show run
+: Saved
+
+:
+: Serial Number: JAD222102MG
+: Hardware:   ASA5506, 4096 MB RAM, CPU Atom C2000 series 1250 MHz, 1 CPU (4 cores)
+:
+ASA Version 9.8(2)
+!
+hostname SIOMO-FW
+enable password $sha512$5000$/8VnfP9g1Bx3+v3Vvy0n/A==$Hn6h8z7j2BCUXwuUT9O9ZQ== pbkdf2
+names
+
+!
+interface GigabitEthernet1/1
+ nameif outside
+ security-level 0
+ ip address 192.168.0.2 255.255.255.0
+!
+interface GigabitEthernet1/2
+ nameif inside
+ security-level 100
+ ip address 192.168.1.1 255.255.255.0
+!
+interface GigabitEthernet1/3
+ shutdown
+ no nameif
+ security-level 100
+ no ip address
+!
+interface GigabitEthernet1/4
+ shutdown
+ no nameif
+ security-level 100
+ no ip address
+!
+interface GigabitEthernet1/5
+ shutdown
+ no nameif
+ security-level 100
+ no ip address
+!
+interface GigabitEthernet1/6
+ shutdown
+ no nameif
+ security-level 100
+ no ip address
+!
+interface GigabitEthernet1/7
+ shutdown
+ no nameif
+ security-level 100
+ no ip address
+!
+interface GigabitEthernet1/8
+ shutdown
+ no nameif
+ security-level 100
+ no ip address
+!
+interface Management1/1
+ management-only
+ no nameif
+ no security-level
+ no ip address
+!
+ftp mode passive
+dns domain-lookup outside
+dns server-group DefaultDNS
+ name-server 8.8.8.8
+ name-server 8.8.4.4
+same-security-traffic permit inter-interface
+object network SSH-SERVER
+ host 192.168.1.247
+object network MBANKING-SERVER
+ host 192.168.1.247
+object network SMS-SERVER
+ host 192.168.1.247
+object-group network skyworld-adc-public-ips
+ network-object 102.220.117.208 255.255.255.248
+ network-object 102.220.116.208 255.255.255.248
+access-list OUT_IN extended permit tcp any object SSH-SERVER eq ssh log
+access-list OUT_IN extended permit tcp object-group skyworld-adc-public-ips object MBANKING-SERVER eq 9093
+access-list OUT_IN extended permit tcp any object SMS-SERVER eq www log
+access-list IN_OUT extended permit tcp object MBANKING-SERVER object-group skyworld-adc-public-ips eq 8443
+access-list IN_OUT extended permit tcp object MBANKING-SERVER object-group skyworld-adc-public-ips eq 8088
+access-list IN_OUT extended deny tcp any object-group skyworld-adc-public-ips eq 8443
+access-list IN_OUT extended deny tcp any object-group skyworld-adc-public-ips eq 8088
+access-list IN_OUT extended permit ip any any
+pager lines 24
+logging asdm informational
+mtu outside 1500
+mtu inside 1500
+no failover
+no monitor-interface service-module
+icmp unreachable rate-limit 1 burst-size 1
+no asdm history enable
+arp timeout 14400
+no arp permit-nonconnected
+arp rate-limit 16384
+!
+object network SSH-SERVER
+ nat (inside,outside) static interface service tcp ssh 5000
+object network MBANKING-SERVER
+ nat (inside,outside) static interface service tcp 9093 9093
+object network SMS-SERVER
+ nat (inside,outside) static interface service tcp www 7000
+!
+nat (inside,outside) after-auto source dynamic any interface
+access-group OUT_IN in interface outside
+access-group IN_OUT in interface inside
+route outside 0.0.0.0 0.0.0.0 192.168.0.1 1
+timeout xlate 3:00:00
+timeout pat-xlate 0:00:30
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02
+timeout sunrpc 0:10:00 h323 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00
+timeout sip 0:30:00 sip_media 0:02:00 sip-invite 0:03:00 sip-disconnect 0:02:00
+timeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute
+timeout tcp-proxy-reassembly 0:01:00
+timeout floating-conn 0:00:00
+timeout conn-holddown 0:00:15
+timeout igp stale-route 0:01:10
+user-identity default-domain LOCAL
+aaa authentication ssh console LOCAL
+aaa authentication login-history
+http server enable
+no snmp-server location
+no snmp-server contact
+service sw-reset-button
+crypto ipsec security-association pmtu-aging infinite
+crypto ca trustpool policy
+telnet timeout 5
+ssh stricthostkeycheck
+ssh 192.168.1.0 255.255.255.0 inside
+ssh timeout 5
+ssh version 2
+ssh key-exchange group dh-group1-sha1
+console timeout 0
+
+dhcpd dns 8.8.8.8 8.8.4.4
+dhcpd option 3 ip 192.168.1.1
+!
+dhcpd address 192.168.1.100-192.168.1.150 inside
+dhcpd enable inside
+!
+threat-detection basic-threat
+threat-detection statistics access-list
+no threat-detection statistics tcp-intercept
+dynamic-access-policy-record DfltAccessPolicy
+username admin password $sha512$5000$rd0c28F/nTgmv3AgVQorXw==$yoYttfyI8cFieECQ9Gq5SA== pbkdf2
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+  no tcp-inspection
+policy-map global_policy
+ class inspection_default
+  inspect dns preset_dns_map
+  inspect ftp
+  inspect h323 h225
+  inspect h323 ras
+  inspect rsh
+  inspect rtsp
+  inspect esmtp
+  inspect sqlnet
+  inspect skinny
+  inspect sunrpc
+  inspect xdmcp
+  inspect sip
+  inspect netbios
+  inspect tftp
+  inspect ip-options
+  inspect icmp
+!
+service-policy global_policy global
+prompt hostname context
+call-home reporting anonymous prompt 1
+Cryptochecksum:e3bb3b188e88d5821ec4e4628d752ee2
+: end
+

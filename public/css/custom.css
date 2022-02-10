@@ -1,25 +1,35 @@
-.bg-custom{
-    background: #28ABE3;
+.bg-custom {
+    background: #28abe3;
     color: white;
 }
 
-.contact-form select:hover{
-    border-color: #28ABE3;
+.btn-custom {
+    background: #28abe3;
+    color: white;
+    border-color: #28abe3;
+    border-radius: 0;
+    border: none;
+    padding: 15px 0;
+    width: 100%;
 }
 
-.required{
+.contact-form select:hover {
+    border-color: #28abe3;
+}
+
+.required {
     color: red;
 }
 
-.custom-file-button:hover{
-    border-color: #28ABE3;
+.custom-file-button:hover {
+    border-color: #28abe3;
 }
 
-.avatar{
+.avatar {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    background-color: #28ABE3;
+    background-color: #28abe3;
     color: white;
     cursor: pointer;
     display: flex;
@@ -27,31 +37,29 @@
     justify-content: center;
 }
 
-.avatar:hover{
+.avatar:hover {
     color: red;
     /* height: 45px;
     width: 45px; */
 }
 
-#remove-file:hover{
+#remove-file:hover {
     cursor: pointer;
     color: red;
 }
 
-button[type="submit"]{
+button[type="submit"] {
     cursor: pointer;
 }
 
-button[type="submit"]:disabled{
+button[type="submit"]:disabled {
     cursor: not-allowed;
 }
 
-.form-control.is-invalid{
+.form-control.is-invalid {
     background-image: none;
 }
 
-.form-control.is-valid{
+.form-control.is-valid {
     background-image: none;
 }
-
-

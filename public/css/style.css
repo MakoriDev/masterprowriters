@@ -901,9 +901,9 @@ a:focus, a:hover {
     padding: 100px 0 50px 0;
 }
 
-.contact-form {
+/* .contact-form {
     margin-bottom: 40px;
-}
+} */
 
 /* .contact-form .form-control {
     background-color: transparent;
@@ -923,7 +923,7 @@ a:focus, a:hover {
     border-color: #28ABE3;
 } */
 
-.contact-form #contact-submit {
+/* .contact-form #contact-submit {
     border: none;
     padding: 15px 0;
     width: 100%;
@@ -937,7 +937,7 @@ a:focus, a:hover {
     padding: 10px;
     height: 120px !important;
     outline: none;
-}
+} */
 
 .contact-details .contact-short-info {
     margin-top: 15px;

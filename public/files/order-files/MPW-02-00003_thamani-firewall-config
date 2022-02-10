@@ -1,0 +1,309 @@
+thamani(config)# show run
+: Saved
+
+: 
+: Serial Number: JAD23010677
+: Hardware:   ASA5506, 4096 MB RAM, CPU Atom C2000 series 1250 MHz, 1 CPU (4 cores)
+:
+ASA Version 9.8(2) 
+!
+hostname thamani
+enable password $sha512$5000$MVN2yh3fK/q2Wp+zTfjMDw==$MDNSKqzr3mtCf/CuqDBjBQ== pbkdf2
+names
+ip local pool THAMANI-VPN-POOL 192.168.8.10-192.168.8.30
+
+!
+interface GigabitEthernet1/1
+ nameif outside
+ security-level 0
+ ip address 197.248.90.134 255.255.255.252 
+!
+interface GigabitEthernet1/2
+ nameif inside_1
+ security-level 100
+ ip address 192.168.10.251 255.255.255.0 
+!
+interface GigabitEthernet1/3
+ bridge-group 1
+ nameif inside_2
+ security-level 100
+!
+interface GigabitEthernet1/4
+ bridge-group 1
+ nameif inside_3
+ security-level 100
+!
+interface GigabitEthernet1/5
+ bridge-group 1
+ nameif inside_4
+ security-level 100
+!
+interface GigabitEthernet1/6
+ bridge-group 1
+ nameif inside_5
+ security-level 100
+!
+interface GigabitEthernet1/7
+ bridge-group 1
+ nameif inside_6
+ security-level 100
+!
+interface GigabitEthernet1/8
+ bridge-group 1
+ nameif inside_7
+ security-level 100
+!
+interface Management1/1
+ management-only
+ no nameif
+ no security-level
+ no ip address
+!
+interface BVI1
+ nameif inside
+ security-level 100
+ no ip address
+!
+!
+time-range working-hours
+ periodic weekdays 8:30 to 16:00
+!
+ftp mode passive
+dns domain-lookup outside
+dns server-group DefaultDNS
+ name-server 41.203.208.18 
+ name-server 41.203.208.19 
+same-security-traffic permit inter-interface
+object network obj_any1
+ subnet 0.0.0.0 0.0.0.0
+object network obj_any2
+ subnet 0.0.0.0 0.0.0.0
+object network obj_any3
+ subnet 0.0.0.0 0.0.0.0
+object network obj_any4
+ subnet 0.0.0.0 0.0.0.0
+object network obj_any5
+ subnet 0.0.0.0 0.0.0.0
+object network obj_any6
+ subnet 0.0.0.0 0.0.0.0
+object network obj_any7
+ subnet 0.0.0.0 0.0.0.0
+object network apache_7000
+ host 192.168.10.111
+object network ssh_5000
+ host 192.168.10.111
+object network ericom_3399
+ host 192.168.10.239
+object network mb_9000
+ host 192.168.10.111
+object network local-vpn-server
+ host 192.168.10.114
+object network remote-vpn-server
+ host 10.2.23.17
+object network thamani-vm-ware
+ host 192.168.10.25
+object network APACHE-7500
+ host 192.168.10.111
+object network remote_23389
+ host 192.168.10.70
+object network THAMANI-LAN
+ subnet 192.168.10.0 255.255.255.0
+object network THAMANI-VPN-POOL
+ subnet 192.168.8.0 255.255.255.0
+object network facebook
+ fqdn www.facebook.com
+object network youtube
+ fqdn www.youtube.com
+object network mbanking_9093
+ host 192.168.10.111
+object-group network youtube-public-ips
+ network-object host 172.217.170.206
+ network-object host 172.217.170.174
+ network-object host 216.58.223.110
+ network-object host 216.58.223.78
+object-group network blocked-sites
+ network-object object facebook
+ network-object object youtube
+ group-object youtube-public-ips
+object-group network skyworld-adc-public-ips
+ network-object 102.220.117.208 255.255.255.248
+ network-object 102.220.116.208 255.255.255.248
+access-list thamani_acl extended permit tcp any object apache_7000 eq 7000 
+access-list thamani_acl extended permit tcp any object ericom_3399 eq 3399 
+access-list thamani_acl extended permit tcp any object ssh_5000 eq ssh 
+access-list thamani_acl extended permit tcp any object thamani-vm-ware eq https 
+access-list thamani_acl extended permit tcp any object mb_9000 eq 9000 
+access-list thamani_acl extended permit tcp any object APACHE-7500 eq 7500 
+access-list thamani_acl extended permit tcp any object remote_23389 eq 3389 
+access-list thamani_acl extended permit tcp object-group skyworld-adc-public-ips object mbanking_9093 eq 9093 
+access-list 101 extended permit ip host 192.168.10.114 host 10.2.23.17 
+access-list SPLIT-TUNNEL standard permit 192.168.10.0 255.255.255.0 
+access-list INSIDE_ACCESS_OUT extended deny tcp any object-group blocked-sites time-range working-hours 
+access-list INSIDE_ACCESS_OUT extended permit tcp object mbanking_9093 object-group skyworld-adc-public-ips eq 8443 
+access-list INSIDE_ACCESS_OUT extended permit tcp object mbanking_9093 object-group skyworld-adc-public-ips eq 8088 
+access-list INSIDE_ACCESS_OUT extended deny tcp any object-group skyworld-adc-public-ips eq 8443 
+access-list INSIDE_ACCESS_OUT extended deny tcp any object-group skyworld-adc-public-ips eq 8088 
+access-list INSIDE_ACCESS_OUT extended permit ip any any 
+pager lines 24
+logging asdm informational
+mtu outside 1500
+mtu inside_1 1500
+mtu inside_2 1500
+mtu inside_3 1500
+mtu inside_4 1500
+mtu inside_5 1500
+mtu inside_6 1500
+mtu inside_7 1500
+icmp unreachable rate-limit 1 burst-size 1
+no asdm history enable
+arp timeout 14400
+no arp permit-nonconnected
+arp rate-limit 16384
+nat (inside_1,outside) source static local-vpn-server local-vpn-server destination static remote-vpn-server remote-vpn-server no-proxy-arp route-lookup
+nat (inside_1,outside) source static THAMANI-LAN THAMANI-LAN destination static THAMANI-VPN-POOL THAMANI-VPN-POOL
+!
+object network obj_any2
+ nat (inside_2,outside) dynamic interface
+object network obj_any3
+ nat (inside_3,outside) dynamic interface
+object network obj_any4
+ nat (inside_4,outside) dynamic interface
+object network obj_any5
+ nat (inside_5,outside) dynamic interface
+object network obj_any6
+ nat (inside_6,outside) dynamic interface
+object network obj_any7
+ nat (inside_7,outside) dynamic interface
+object network apache_7000
+ nat (inside_1,outside) static interface service tcp 7000 7000 
+object network ssh_5000
+ nat (inside_1,outside) static interface service tcp ssh 5000 
+object network mb_9000
+ nat (inside_1,outside) static interface service tcp 9000 9000 
+object network thamani-vm-ware
+ nat (inside_1,outside) static interface service tcp https 8443 
+object network APACHE-7500
+ nat (inside_1,outside) static interface service tcp 7500 7500 
+object network remote_23389
+ nat (inside_1,outside) static interface service tcp 3389 23389 
+object network mbanking_9093
+ nat (inside_1,outside) static interface service tcp 9093 9093 
+!
+nat (inside_1,outside) after-auto source dynamic any interface
+access-group thamani_acl in interface outside
+access-group INSIDE_ACCESS_OUT in interface inside_1
+route outside 0.0.0.0 0.0.0.0 197.248.90.133 1
+timeout xlate 3:00:00
+timeout pat-xlate 0:00:30
+timeout conn 1:00:00 half-closed 0:10:00 udp 0:02:00 sctp 0:02:00 icmp 0:00:02
+timeout sunrpc 0:10:00 h323 0:05:00 h225 1:00:00 mgcp 0:05:00 mgcp-pat 0:05:00
+timeout sip 0:30:00 sip_media 0:02:00 sip-invite 0:03:00 sip-disconnect 0:02:00
+timeout sip-provisional-media 0:02:00 uauth 0:05:00 absolute
+timeout tcp-proxy-reassembly 0:01:00
+timeout floating-conn 0:00:00
+timeout conn-holddown 0:00:15
+timeout igp stale-route 0:01:10
+user-identity default-domain LOCAL
+aaa authentication ssh console LOCAL 
+aaa authentication login-history
+http server enable
+http 192.168.1.0 255.255.255.0 inside_2
+http 192.168.1.0 255.255.255.0 inside_3
+http 192.168.1.0 255.255.255.0 inside_4
+http 192.168.1.0 255.255.255.0 inside_5
+http 192.168.1.0 255.255.255.0 inside_6
+http 192.168.1.0 255.255.255.0 inside_7
+no snmp-server location
+no snmp-server contact
+service sw-reset-button
+crypto ipsec ikev1 transform-set THAMANI-TANGAZOLETU-SET esp-aes esp-sha-hmac 
+crypto ipsec ikev1 transform-set THAMANI-VPN-SET esp-aes-256 esp-sha-hmac 
+crypto ipsec security-association lifetime seconds 3600
+crypto ipsec security-association pmtu-aging infinite
+crypto dynamic-map THAMANI-DYNAMIC-MAP 1 set ikev1 transform-set THAMANI-VPN-SET
+crypto dynamic-map THAMANI-DYNAMIC-MAP 1 set reverse-route
+crypto map THAMANI-TANGAZOLETU-MAP 10 match address 101
+crypto map THAMANI-TANGAZOLETU-MAP 10 set peer 196.216.66.46 
+crypto map THAMANI-TANGAZOLETU-MAP 10 set ikev1 transform-set THAMANI-TANGAZOLETU-SET
+crypto map THAMANI-TANGAZOLETU-MAP 20 ipsec-isakmp dynamic THAMANI-DYNAMIC-MAP
+crypto map THAMANI-TANGAZOLETU-MAP interface outside
+crypto ca trustpool policy
+crypto ikev1 enable outside
+crypto ikev1 policy 10
+ authentication pre-share
+ encryption 3des
+ hash sha
+ group 2
+ lifetime 86400
+crypto ikev1 policy 20
+ authentication pre-share
+ encryption aes-256
+ hash sha
+ group 2
+ lifetime 86400
+telnet timeout 5
+ssh stricthostkeycheck
+ssh 192.168.10.0 255.255.255.0 inside_1
+ssh 192.168.15.0 255.255.255.0 inside_1
+ssh timeout 5
+ssh key-exchange group dh-group1-sha1
+console timeout 0
+
+dhcpd auto_config outside
+!
+threat-detection basic-threat
+threat-detection statistics access-list
+no threat-detection statistics tcp-intercept
+group-policy THAMANI-VPN-POLICY internal
+group-policy THAMANI-VPN-POLICY attributes
+ dns-server value 8.8.8.8
+ vpn-idle-timeout 15
+ split-tunnel-policy tunnelspecified
+ split-tunnel-network-list value SPLIT-TUNNEL
+dynamic-access-policy-record DfltAccessPolicy
+username admin password $sha512$5000$aWVnFFktzIvFmwbO3RxTMA==$rTgUbXbFrIVbCs4W/OwTPA== pbkdf2
+username thamani-vpn-user password $sha512$5000$nnJ0czXKCxI7WlO6y+x+CA==$Y3tDV35W73yUDF5f7HOUUA== pbkdf2
+tunnel-group 196.216.66.46 type ipsec-l2l
+tunnel-group 196.216.66.46 ipsec-attributes
+ ikev1 pre-shared-key *****
+tunnel-group THAMANI-REMOTE-VPN type remote-access
+tunnel-group THAMANI-REMOTE-VPN general-attributes
+ address-pool THAMANI-VPN-POOL
+ default-group-policy THAMANI-VPN-POLICY
+tunnel-group THAMANI-REMOTE-VPN ipsec-attributes
+ ikev1 pre-shared-key *****
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+!
+policy-map type inspect dns preset_dns_map
+ parameters
+  message-length maximum client auto
+  message-length maximum 512
+  no tcp-inspection
+policy-map global_policy
+ class inspection_default
+  inspect dns preset_dns_map 
+  inspect ftp 
+  inspect h323 h225 
+  inspect h323 ras 
+  inspect rsh 
+  inspect rtsp 
+  inspect esmtp 
+  inspect sqlnet 
+  inspect skinny  
+  inspect sunrpc 
+  inspect xdmcp 
+  inspect sip  
+  inspect netbios 
+  inspect tftp 
+  inspect ip-options 
+  inspect icmp 
+!
+service-policy global_policy global
+prompt hostname context 
+no call-home reporting anonymous
+Cryptochecksum:7c191966865cb4dd343a7af6746ffcef
+: end
+

@@ -58,7 +58,7 @@ class OrderController extends Controller
         unset($validOrderData['filteredFiles']);
         $validOrderData['number'] = $this->getOrderNumber();
         $validOrderData['deadline_timestamp'] = $this->getDeadlineTimestamp();
-        
+
         $orderId = Order::create($validOrderData)->id;
 
         $files = $request->file('filteredFiles');
@@ -76,7 +76,9 @@ class OrderController extends Controller
         }
 
         return response()->json([
-            'message' => 'success'
+            'message' => 'success',
+            'redirectUrl' => route('show-checkout-form'),
+            'number' => $validOrderData['number'],
         ]);
     }
 
@@ -248,7 +250,7 @@ class OrderController extends Controller
         $ordersCount = Order::count() + 1;
 
         $formattedOrderCount = sprintf("%05d", $ordersCount);
-        $month = date('n');
+        $month = date('m');
         return "MPW-$month-$formattedOrderCount";
     }
 
