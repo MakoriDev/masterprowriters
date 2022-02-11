@@ -22,7 +22,16 @@
                 <ul class="nav nav-treeview">
                     {{-- @can('view product category') --}}
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('order.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-asterisk"></i>
+                                <p>All</p>
+                            </a>
+                        </li>
+                    {{-- @endcan --}}
+
+                    {{-- @can('view product category') --}}
+                        <li class="nav-item">
+                            <a href="{{ route('order.active') }}" class="nav-link">
                                 <i class="nav-icon fas fa-asterisk"></i>
                                 <p>Active</p>
                             </a>
@@ -31,7 +40,7 @@
 
                     {{-- @can('view supplier') --}}
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('order.complete') }}" class="nav-link">
                                 <i class="nav-icon fas fa-asterisk"></i>
                                 <p>Complete</p>
                             </a>
@@ -40,7 +49,7 @@
 
                     {{-- @can('view product') --}}
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{ route('order.unpaid') }}" class="nav-link">
                                 <i class="nav-icon fas fa-asterisk"></i>
                                 <p>Unpaid</p>
                             </a>
@@ -52,7 +61,7 @@
 
             <li class="nav-item">
                 {{-- @can('view dashboard') --}}
-                    <a href="#" class="nav-link">
+                    <a href="{{ route('feedback.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-comments"></i>
                         <p>Feedback</p>
                     </a>

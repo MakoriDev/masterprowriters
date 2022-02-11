@@ -14,11 +14,18 @@ use App\Http\Controllers\TestPayPalController;
 Route::get('/', [StaticPageController::class, 'index'])->name('site-root');
 Route::get('about-us', [StaticPageController::class, 'aboutUs'])->name('about-us');
 Route::get('services', [StaticPageController::class, 'services'])->name('services');
-Route::resource('feedback', FeedbackController::class);
 Route::post('redirect-order', [StaticPageController::class, 'order'])->name('redirect-order');
 
 //Order routes
-Route::resource('order', OrderController::class);
+Route::resource('order', OrderController::class)->except(['update']);
+Route::get('active-orders', [OrderController::class, 'active'])->name('order.active');
+Route::get('complete-orders', [OrderController::class, 'complete'])->name('order.complete');
+Route::get('unpaid-orders', [OrderController::class, 'unpaid'])->name('order.unpaid');
+
+
+//Feedback Routes
+Route::resource('feedback', FeedbackController::class);
+
 
 //Checkout routes
 Route::get('show-checkout-form', [CheckoutController::class, 'showCheckoutForm'])->name('show-checkout-form');

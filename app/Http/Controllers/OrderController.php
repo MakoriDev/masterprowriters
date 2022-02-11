@@ -16,11 +16,46 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = Order::all();
+        $orders = Order::latest()->get();
 
         return view('order.index', compact('orders'));
     }
 
+
+    public function active()
+    {
+        $orders = Order::where([
+            ['payment_status', 'paid'],
+            ['progress', 'active']
+        ])
+        ->latest()
+        ->get();
+
+        return view('order.active', compact('orders'));
+    }
+
+
+    public function complete()
+    {
+        $orders = Order::where([
+            ['payment_status', 'paid'],
+            ['progress', 'complete']
+        ])
+            ->latest()
+            ->get();
+
+        return view('order.complete', compact('orders'));
+    }
+
+
+    public function unpaid()
+    {
+        $orders = Order::where('payment_status', 'unpaid')
+            ->latest()
+            ->get();
+
+        return view('order.unpaid', compact('orders'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -57,7 +92,7 @@ class OrderController extends Controller
 
         unset($validOrderData['filteredFiles']);
         $validOrderData['number'] = $this->getOrderNumber();
-        $validOrderData['deadline_timestamp'] = $this->getDeadlineTimestamp();
+        $validOrderData['deadline_timestamp'] = $this->getDeadlineTimestamp($validOrderData['deadline']);
 
         $orderId = Order::create($validOrderData)->id;
 

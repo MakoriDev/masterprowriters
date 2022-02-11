@@ -1,17 +1,18 @@
 @extends('layouts.dashboard')
-@section('title', 'All Orders')
+@section('title', 'Active Orders')
 @section('css')
     @include('inc.datatable-css')
 @endsection
 @section('header-content')
     <div class="row mb-2">
         <div class="col-sm-6">
-            <h1> All Orders</h1>
+            <h1> Active Orders</h1>
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active"> All Orders</li>
+                <li class="breadcrumb-item"><a href="{{ route('order.index') }}">All Orders</a></li>
+                <li class="breadcrumb-item active"> Active Orders</li>
             </ol>
         </div>
     </div>
@@ -22,7 +23,7 @@
         <div class="col-12">
             <div class="card mb-4">
                 <div class="card-header bg-light">
-                    <h6 class="card-title">All Orders</h6>
+                    <h6 class="card-title">Active Orders</h6>
                 </div>
                 <div class="card-body">
                     <table id="orders-list" class="table table-sm table-striped table-hover">

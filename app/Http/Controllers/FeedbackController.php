@@ -15,9 +15,9 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        $feedback = Feedback::latest()->get();
+        $messages = Feedback::latest()->get();
 
-        return view('feedback.index', compact('feedback'));
+        return view('feedback.index', compact('messages'));
     }
 
     /**
