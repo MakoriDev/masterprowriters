@@ -1,9 +1,0 @@
-switchport mode access
-switchport port-security
-switchport port-security mac-address 8c04.ba0a.bdca
-switchport port-security violation restrict
-
-switchport port-security mac-address sticky
-
-checking which ports are in error state (solid amber)
-do show int status err-disable
