@@ -38,9 +38,9 @@
                                 <th>Level</th>
                                 <th>Deadline</th>
                                 <th>Deadline Timestamp</th>
-                                {{-- @canany(['view product', 'edit product', 'restock product', 'delete product']) --}}
+                                @canany(['view order details'])
                                     <th>Actions</th>
-                                {{-- @endcanany --}}
+                                @endcanany
                             </tr>
                         </thead>
                         <tbody>
@@ -56,20 +56,17 @@
                                     <td>{{ $order->level }}</td>
                                     <td>{{ $order->deadline }}</td>
                                     <td>{{ $order->deadline_timestamp }}</td>
-                                    {{-- @canany(['view product', 'edit product', 'restock product', 'delete product']) --}}
+                                    @canany(['view order details'])
                                         <td>
                                             <div class="d-flex">
-                                                {{-- @can('view product') --}}
-                                                    <a href="#"
-                                                        class="btn btn-sm btn-secondary mr-2"><i
+                                                @can('view order details')
+                                                    <a href="#" class="btn btn-sm btn-secondary mr-2"><i
                                                             class="far fa-eye mr-1"></i>Details</a>
-                                                {{-- @endcan --}}
+                                                @endcan
 
                                             </div>
                                         </td>
-                                    {{-- @endcanany --}}
-
-
+                                    @endcanany
                                 </tr>
                             @endforeach
                         </tbody>
@@ -88,4 +85,3 @@
         });
     </script>
 @endsection
-

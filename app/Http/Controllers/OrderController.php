@@ -9,6 +9,14 @@ use Illuminate\Support\Carbon;
 
 class OrderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:view all orders')->only(['index']);
+        $this->middleware('permission:view active orders')->only(['active']);
+        $this->middleware('permission:view complete orders')->only(['complete']);
+        $this->middleware('permission:view unpaid orders')->only(['unpaid']);
+        $this->middleware('permission:view order details')->only(['show']);
+    }
     /**
      * Display a listing of the resource.
      *

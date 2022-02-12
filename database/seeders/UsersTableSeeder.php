@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::Create([
+        $user = User::Create([
             'name' => 'Felix Oduor',
             'username' => 'felix',
             'email' => 'felix@felix.com',
@@ -24,5 +24,7 @@ class UsersTableSeeder extends Seeder
             'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
             'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
         ]);
+
+        $user->assignRole('admin');
     }
 }

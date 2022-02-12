@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class FeedbackController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:view feedback')->only(['index']);
+    }
     /**
      * Display a listing of the resource.
      *

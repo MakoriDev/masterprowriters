@@ -2,11 +2,14 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\FeedbackController;
-use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\TestPayPalController;
 
@@ -17,7 +20,7 @@ Route::get('services', [StaticPageController::class, 'services'])->name('service
 Route::post('redirect-order', [StaticPageController::class, 'order'])->name('redirect-order');
 
 //Order routes
-Route::resource('order', OrderController::class)->except(['update']);
+Route::resource('order', OrderController::class)->except(['edit','update']);
 Route::get('active-orders', [OrderController::class, 'active'])->name('order.active');
 Route::get('complete-orders', [OrderController::class, 'complete'])->name('order.complete');
 Route::get('unpaid-orders', [OrderController::class, 'unpaid'])->name('order.unpaid');
@@ -43,7 +46,9 @@ Auth::routes(['login' => false]);
 Route::get('admin', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('admin', [LoginController::class, 'login']);
 
-
+Route::resource('permission', PermissionController::class)->except(['show']);
+Route::resource('role', RoleController::class);
+Route::resource('user', UserController::class)->except(['create', 'store']);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 

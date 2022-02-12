@@ -23,7 +23,7 @@
                 <span class="info-box-icon bg-info elevation-1"><i class="fas fa-tasks"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text"><a href="#" class="text-black h5">All Orders</a></span>
+                    <span class="info-box-text"><a href="{{ route('order.index') }}" class="text-black h5">All Orders</a></span>
                     <span class="info-box-number">{{ $allOrders }}</span>
                 </div>
                 <!-- /.info-box-content -->
@@ -36,7 +36,7 @@
                 <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-spinner fa-spin"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text"><a href="#" class="text-black h5">Active Orders</a></span>
+                    <span class="info-box-text"><a href="{{ route('order.active') }}" class="text-black h5">Active Orders</a></span>
                     <span class="info-box-number">{{ $activeOrders }}</span>
                 </div>
                 <!-- /.info-box-content -->
@@ -53,7 +53,7 @@
                 <span class="info-box-icon bg-success elevation-1"><i class="fas fa-clipboard-check"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text"><a href="#" class="text-black h5">Complete Orders</a></span>
+                    <span class="info-box-text"><a href="{{ route('order.complete') }}" class="text-black h5">Complete Orders</a></span>
                     <span class="info-box-number">{{ $completeOrders }}</span>
                 </div>
                 <!-- /.info-box-content -->
@@ -66,7 +66,7 @@
                 <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-comments"></i></span>
 
                 <div class="info-box-content">
-                    <span class="info-box-text"><a href="#" class="text-black h5">Feedback</a></span>
+                    <span class="info-box-text"><a href="{{ route('feedback.index') }}" class="text-black h5">Feedback</a></span>
                     <span class="info-box-number">{{ $feedback }}</span>
                 </div>
                 <!-- /.info-box-content -->
