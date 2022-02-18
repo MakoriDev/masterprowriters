@@ -61,7 +61,7 @@
                                         <td>
                                             <div class="d-flex">
                                                 @can('view order details')
-                                                    <a href="#" class="btn btn-sm btn-secondary mr-2"><i
+                                                    <a href="{{ route('order.show', $order) }}" class="btn btn-sm btn-secondary mr-2"><i
                                                             class="far fa-eye mr-1"></i>Details</a>
                                                 @endcan
 

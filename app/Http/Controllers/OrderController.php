@@ -32,12 +32,7 @@ class OrderController extends Controller
 
     public function active()
     {
-        $orders = Order::where([
-            ['payment_status', 'paid'],
-            ['progress', 'active']
-        ])
-        ->latest()
-        ->get();
+        $orders = Order::active()->latest()->get();
 
         return view('order.active', compact('orders'));
     }
@@ -45,12 +40,7 @@ class OrderController extends Controller
 
     public function complete()
     {
-        $orders = Order::where([
-            ['payment_status', 'paid'],
-            ['progress', 'complete']
-        ])
-            ->latest()
-            ->get();
+        $orders = Order::complete()->latest()->get();
 
         return view('order.complete', compact('orders'));
     }
@@ -58,9 +48,7 @@ class OrderController extends Controller
 
     public function unpaid()
     {
-        $orders = Order::where('payment_status', 'unpaid')
-            ->latest()
-            ->get();
+        $orders = Order::unpaid()->latest()->get();
 
         return view('order.unpaid', compact('orders'));
     }
@@ -133,7 +121,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return view('order.show', compact('order'));
     }
 
     /**
@@ -287,6 +275,11 @@ class OrderController extends Controller
         ]);
     }
 
+
+    public function download(Request $request)
+    {
+        return response()->download(public_path('/files/order-files/'.$request->filename));
+    }
 
     private function getOrderNumber()
     {

@@ -24,6 +24,7 @@ Route::resource('order', OrderController::class)->except(['edit','update']);
 Route::get('active-orders', [OrderController::class, 'active'])->name('order.active');
 Route::get('complete-orders', [OrderController::class, 'complete'])->name('order.complete');
 Route::get('unpaid-orders', [OrderController::class, 'unpaid'])->name('order.unpaid');
+Route::post('order/download-file', [OrderController::class, 'download'])->name('order.download');
 
 
 //Feedback Routes

@@ -13,15 +13,12 @@ class DashboardController extends Controller
         $this->middleware('permission:view dashboard')->only(['index']);
     }
 
-    
+
     public function index()
     {
         $allOrders = Order::all()->count();
-        $activeOrders = Order::where([
-            ['progress', 'active'],
-            ['payment_status', 'paid']
-        ])->count();
-        $completeOrders = Order::where('progress', 'complete')->count();
+        $activeOrders = Order::active()->count();
+        $completeOrders = Order::complete()->count();
         $feedback = Feedback::all()->count();
 
         return view('dashboard.index', compact(
