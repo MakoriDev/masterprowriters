@@ -335,7 +335,7 @@
 
                         console.log(response)
                         let url = `${response.redirectUrl}?number=${response.number}`;
-                        location.reload();
+                        // location.reload();
                         window.location.href = url;
 
 

@@ -17,13 +17,15 @@ class CheckoutController extends Controller
 
     public function processTransaction(Request $request)
     {
+        // dd(gettype($request->amount));
         $data = [
             'intent' => 'CAPTURE',
             'return_url' => route('success-transaction'),
             'cancel_url' => route('cancel-transaction'),
             'id' => $request->number,
             'currency_code' => 'USD',
-            'value' => $request->amount
+            // 'value' => $request->amount
+            'value' => '1.00'
         ];
 
 
