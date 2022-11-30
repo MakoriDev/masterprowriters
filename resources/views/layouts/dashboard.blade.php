@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Master Prowriters | @yield('title')</title>
+    <title>{{ config('app.name') }} | @yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('images/favicon.png') }}" />
     <link rel="stylesheet"
@@ -28,7 +28,7 @@
                             class="fas fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-sm-inline-block">
-                    <h5 class="text-bold mt-2">Master Prowriters</h5>
+                    <h5 class="text-bold mt-2">{{ config('app.name') }}</h5>
                 </li>
             </ul>
 
@@ -65,7 +65,7 @@
             <a href="{{ route('site-root') }}" class="brand-link">
                 <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo"
                     class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">Master Prowriters</span>
+                <span class="brand-text font-weight-light">{{ config('app.name') }}</span>
             </a>
 
             <!-- Sidebar -->
