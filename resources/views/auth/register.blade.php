@@ -4,7 +4,7 @@
     <div class="register-box">
         <div class="card card-outline card-primary">
             <div class="card-header text-center">
-                <a href="#" class="h3">Master Prowriters</a>
+                <a href="#" class="h3">{{ config('app.name') }}</a>
             </div>
             <div class="card-body">
                 <p class="login-box-msg">Register a new user</p>
