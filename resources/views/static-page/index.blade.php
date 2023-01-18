@@ -9,11 +9,10 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center">
-                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Crafting Digital <br>
-                            Experience</h1>
-                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Lorem ipsum dolor sit
-                            amet, consectetur adipisicing elit. Quod, <br> veritatis tempore nostrum id
-                            officia quaerat eum corrupti, <br> ipsa aliquam velit.</p>
+                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Helping you better your grades <br>
+                        </h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Master pro writers is dedicated offering the best writting services in the industry <br>
+                             <br> </p>
 
                     </div>
 
@@ -172,10 +171,8 @@
                 <!-- section title -->
                 <div class="col-12">
                     <div class="title text-center">
-                        <h2>We Are Bingo Agency</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam reprehenderit accusamus
-                            labore iusto,
-                            aut, eum itaque illo totam tempora eius.</p>
+                        <h2>We Are Master prowriters Agency</h2>
+                        <p>At Masterprowriters we offer the best services in writting dissertations</p>
                         <div class="border"></div>
                     </div>
                 </div>
@@ -186,15 +183,7 @@
                 </div>
                 <div class="col-md-6">
                     <ul class="checklist">
-                        <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis
-                            vestibulum.
-                        </li>
-                        <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
-                        <li>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem laca quam venenatis
-                            vestibulum.
-                        </li>
-                        <li>Etiam porta sem multipage evint landing magna mollis euismod a pharetra augue.</li>
-                        <li>Aenean quam. Pellentesque ornare sem laca quam venenatis vestibulum.</li>
+                        
                     </ul>
                     <a href="#" class="btn btn-main mt-20">Learn More</a>
                 </div>
@@ -210,8 +199,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>Let's Create Something Together</h2>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit
-                        consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
+                    <p></p>
                     <a href="" class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->
@@ -228,9 +216,7 @@
                 <div class="col-md-12 text-center">
                     <div class="title">
                         <h2>Award-Winning Agency</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed
-                            condimentum iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi
-                            sed tortor a risus luctus dignissim.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- first count item -->
@@ -299,11 +285,7 @@
                             <i class="tf-ion-chatbubbles"></i>
                             <!-- client info -->
                             <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum.
-                                    Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis
-                                    voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod,
-                                    quia?</p>
+                                <p></p>
                             </div>
                             <!-- /client info -->
                             <!-- client photo -->
@@ -323,11 +305,7 @@
                             <i class="tf-ion-chatbubbles"></i>
                             <!-- client info -->
                             <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum.
-                                    Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis
-                                    voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod,
-                                    quia?</p>
+                                <p></p>
                             </div>
                             <!-- /client info -->
                             <!-- client photo -->
@@ -336,7 +314,7 @@
                             </div>
                             <div class="client-meta">
                                 <h3>Emma Harrison</h3>
-                                <span>CEO , Company Name</span>
+                                <span></span>
                             </div>
                             <!-- /client photo -->
                         </div>
@@ -347,11 +325,7 @@
                             <i class="tf-ion-chatbubbles"></i>
                             <!-- client info -->
                             <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum.
-                                    Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis
-                                    voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod,
-                                    quia?</p>
+                                <p></p>
                             </div>
                             <!-- /client info -->
                             <!-- client photo -->
@@ -397,10 +371,8 @@
 
                         <div class="content">
                             <h3><a href="#">Reasons to Smile</a></h3>
-                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf
-                                moon officia aute, non skateboard dolor brunch.</p>
-                            <a class="btn btn-main" href="#">Read more</a>
+                            <p></p>
+                            <a class="btn btn-main" href="#"></a>
                         </div>
                     </div>
                 </article>
@@ -416,9 +388,7 @@
 
                         <div class="content">
                             <h3><a href="#">A Few Moments</a></h3>
-                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf
-                                moon officia aute, non skateboard dolor brunch.</p>
+                            <p></p>
                             <a class="btn btn-main" href="#">Read more</a>
                         </div>
                     </div>
@@ -435,9 +405,7 @@
 
                         <div class="content">
                             <h3><a href="#">Hints for Life</a></h3>
-                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf
-                                moon officia aute, non skateboard dolor brunch.</p>
+                            <p></p>
                             <a class="btn btn-main" href="#">Read more</a>
                         </div>
                     </div>

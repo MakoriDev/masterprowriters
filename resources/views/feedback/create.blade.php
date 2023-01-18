@@ -34,8 +34,7 @@
                 <div class="col-12">
                     <div class="title text-center">
                         <h2>Get In Touch</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis eveniet maiores ab
-                            maxime nam ut numquam molestiae quaerat incidunt?</p>
+                        <p></p>
                         <div class="border"></div>
                     </div>
                 </div>
@@ -44,25 +43,23 @@
 
                 <div class="contact-details col-md-6 ">
                     <h3>Contact Details</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi
-                        blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat
-                        dicta laboriosam labore adipisci.</p>
+                    <p></p>
                     <ul class="contact-short-info">
                         <li>
                             <i class="tf-ion-ios-home"></i>
-                            <span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+                            <span>United States, New York City </span>
                         </li>
                         <li>
                             <i class="tf-ion-android-phone-portrait"></i>
-                            <span>Phone: +880-31-000-000</span>
+                            <span>Phone: +254 79673007 </span>
                         </li>
                         <li>
                             <i class="tf-ion-android-globe"></i>
-                            <span>Fax: +880-31-000-000</span>
+                            <span>Fax: +254 796733007</span>
                         </li>
                         <li>
                             <i class="tf-ion-android-mail"></i>
-                            <span>Email: hello@meghna.com</span>
+                            <span>Email: masterprowriters@gmail.com</span>
                         </li>
                     </ul>
 

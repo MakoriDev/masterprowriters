@@ -24,14 +24,21 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mt-20">
-                    <h2>We Create Designs<br> and technology</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat voluptate molestias, quaerat quo
-                        natus dolor harum voluptatibus modi dicta ducimus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum quae officia earum dolore est quaerat
-                        cupiditate voluptatibus id, magni alias veniam voluptate, libero explicabo, distinctio atque!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, fugit itaque ratione incidunt
-                        voluptas. Quaerat quidem dolor, quisquam amet inventore quas adipisci ea sint qui placeat beatae
-                        molestias aut, aperiam!</p>
+                    <h2><br> Master ProWriters</h2>
+                    <p>At masterprowriters we offer the best writing services in dissertations, course work and othe assignments</p>
+                    <p>We have a team of professionals who will handle your orders promptly and with keen detail on instructions. The work is revised by another team of experts that ensures the final work is up to the required standards</p>
+                    <p>We offer the best services in;</p>
+                    <li> Computer Science Assignments </li>
+                    <li> Bussiness Courses</li>
+                    <li> Law exams</li>
+                    <li> Pyschology classes</li>
+                    <li> Trigonemetry </li>
+                    <li> Mathematics </li>
+                    <li> Information Technology </li>
+                    <li> Cyber security </li>
+                    <li> History</li>
+                    <li> English Literature </li>
+                
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid" src="images/company/company-image.jpg" alt="">
@@ -47,18 +54,12 @@
             <div class="row">
                 <div class="col-md-6">
                     <h3>Our Mission</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in suscipit voluptatum totam dolores
-                        assumenda vel, quia earum voluptatem blanditiis vero accusantium saepe aliquid nulla nemo accusamus,
-                        culpa inventore! Culpa nemo aspernatur tenetur, at quam aliquid reprehenderit obcaecati dicta illum
-                        mollitia, perferendis hic, beatae voluptates? Ex labore, obcaecati harum nam.</p>
+                    <p>Help you better your grades</p>
                     <img src="images/company/company-image-2.jpg" alt="" class="img-fluid mt-30">
                 </div>
                 <div class="col-md-6">
                     <h3>Our Vision</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in suscipit voluptatum totam dolores
-                        assumenda vel, quia earum voluptatem blanditiis vero accusantium saepe aliquid nulla nemo accusamus,
-                        culpa inventore! Culpa nemo aspernatur tenetur, at quam aliquid reprehenderit obcaecati dicta illum
-                        mollitia, perferendis hic, beatae voluptates? Ex labore, obcaecati harum nam.</p>
+                    <p>We are dedicated to helping everyone achieve better grades and allow students to engage fully with our team of writers</p>
                     <img src="images/company/company-image-3.jpg" alt="" class="img-fluid mt-30">
                 </div>
             </div>
@@ -74,10 +75,7 @@
                 <div class="col-12">
                     <div class="title text-center">
                         <h2>Our Promo Video</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu.Sed condimentum
-                            iaculis ex,
-                            in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a risus luctus
-                            dignissim.</p>
+                        <p></p>
                         <div class="border"></div>
                     </div>
                 </div>
@@ -114,9 +112,7 @@
                 <div class="col-md-12">
                     <div class="title text-center">
                         <h2>Sneak Peak Gallery</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore numquam esse vitae recusandae
-                            qui aspernatur, blanditiis, laboriosam dignissimos dolore facere provident ex? Porro,
-                            praesentium consectetur tempore. Nulla, error eius dolorem.</p>
+                        <p></p>
                     </div>
                 </div>
             </div>
@@ -153,9 +149,7 @@
                 <div class="col-12">
                     <div class="title text-center ">
                         <h2>Our Team</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque quasi tempora obcaecati,
-                            quis
-                            similique quos.</p>
+                        <p></p>
                         <div class="border"></div>
                     </div>
                 </div>

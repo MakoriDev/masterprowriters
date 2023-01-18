@@ -27,8 +27,7 @@
                 <div class="col-12">
                     <div class="title text-center">
                         <h2>Our Services</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum iaculis ex,
-                            in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a risus luctus dignissim.</p>
+                        <p>We offer the best writing services in the industry</p>
                         <div class="border"></div>
                     </div>
                 </div>
@@ -40,9 +39,12 @@
                         <div class="service-icon text-center">
                             <i class="tf-ion-ios-copy-outline"></i>
                         </div>
-                        <h3>WordPress Theme</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam
-                            iaculis arcu at mauris dapibus consectetur.</p>
+                        <h3>Dissertation Writing</h3>
+                        <p>A dissertation is a long-form piece of academic writing based on original research conducted by you. It is usually submitted as the final step in order to finish a PhD program.
+
+Your dissertation is probably the longest piece of writing you’ve ever completed. It requires solid research, writing, and analysis skills, and it can be intimidating to know where to begin.
+
+Your department likely has guidelines related to how your dissertation should be structured. When in doubt, consult with your supervisor. We are experts in dissertations and we guarantee that your final year doesnt have to be hectic</p>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -53,9 +55,10 @@
                         <div class="service-icon text-center">
                             <i class="tf-ion-ios-alarm-outline"></i>
                         </div>
-                        <h3>Responsive Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam
-                            iaculis arcu at mauris dapibus consectetur.</p>
+                        <h3>Proposal Writing</h3>
+                        <p>Proposal writing is difficult if you are trying to create the solution while you write the proposal. Unfortunately, many people end up in this spot, and instead of just calling the prospect, they try to guess. This is a stressful, low-chance-of-success way to do it.
+
+If you prepare properly ahead of time, actually writing the proposal shouldn't be too difficult, especially with help from experts</p>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -66,9 +69,8 @@
                         <div class="service-icon text-center">
                             <i class="tf-ion-ios-book-outline"></i>
                         </div>
-                        <h3>Media &amp; Advertisement</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam
-                            iaculis arcu at mauris dapibus consectetur.</p>
+                        <h3>Course Work &amp; Exams</h3>
+                        <p>We will help with your courswork assignents on different subjects</p>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -80,8 +82,9 @@
                             <i class="tf-ion-ios-briefcase-outline"></i>
                         </div>
                         <h3>Graphic Design</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam
-                            iaculis arcu at mauris dapibus consectetur.</p>
+                        <p>We offer the best graphic design services. Contact us for;</p>
+                        <li>Posters</li>
+                        <li></li>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -93,8 +96,7 @@
                             <i class="tf-ion-ios-crop"></i>
                         </div>
                         <h3>Apps Development</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam
-                            iaculis arcu at mauris dapibus consectetur.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -106,8 +108,7 @@
                             <i class="tf-ion-ios-home-outline"></i>
                         </div>
                         <h3>Networking</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam
-                            iaculis arcu at mauris dapibus consectetur.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -124,8 +125,7 @@
                 <div class="col-12">
                     <div class="title text-center">
                         <h2>Our Skills</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fugiat, vel veniam, eos et
-                            delectus eveniet molestiae. Esse, voluptas ratione.</p>
+                        <p></p>
                         <div class="border"></div>
                     </div>
                 </div>
@@ -134,10 +134,7 @@
                 <div class="col-md-5">
                     <div class="team-skills-content">
                         <h2>Simple To Start</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bium, letcu. Sedndime ntumiaculis ex, in
-                            faucibus lorem accumsan non. Donec mattis tin unt metuorbi sed tort Igor aman luctus dignissim.
-                            Vestibulum nisl tortor, consectetur quis imperdiet bium, letcu. Sedndime ntumiaculis ex, in
-                            faucibus lorem accumsan non.</p>
+                        <p></p>
                         <a href="" class="btn btn-main mt-20">Contact Us</a>
                     </div>
                 </div>
@@ -202,7 +199,7 @@
                 <div class="col-md-12 text-center">
                     <div class="title">
                         <h2>Award-Winning Agency</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a risus luctus dignissim.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- first count item -->
@@ -268,7 +265,7 @@
                             <i class="tf-ion-chatbubbles"></i>
                             <!-- client info -->
                             <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                                <p></p>
                             </div>
                             <!-- /client info -->
                             <!-- client photo -->
@@ -277,7 +274,7 @@
                             </div>
                             <div class="client-meta">
                                 <h3>William Martin</h3>
-                                <span>CEO , Company Name</span>
+                                <span></span>
                             </div>
                             <!-- /client photo -->
                         </div>
@@ -288,7 +285,7 @@
                             <i class="tf-ion-chatbubbles"></i>
                             <!-- client info -->
                             <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                                <p></p>
                             </div>
                             <!-- /client info -->
                             <!-- client photo -->
@@ -297,7 +294,7 @@
                             </div>
                             <div class="client-meta">
                                 <h3>Emma Harrison</h3>
-                                <span>CEO , Company Name</span>
+                                <span></span>
                             </div>
                             <!-- /client photo -->
                         </div>
@@ -308,7 +305,7 @@
                             <i class="tf-ion-chatbubbles"></i>
                             <!-- client info -->
                             <div class="client-details">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nulla, soluta dolorum. Eos earum, magni asperiores, unde corporis labore, enim, voluptatum officiis voluptates alias natus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, officia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, quia?</p>
+                                <p></p>
                             </div>
                             <!-- /client info -->
                             <!-- client photo -->
@@ -317,7 +314,7 @@
                             </div>
                             <div class="client-meta">
                                 <h3>Alexander Lucas</h3>
-                                <span>CEO , Company Name</span>
+                                <span></span>
                             </div>
                             <!-- /client photo -->
                         </div>
