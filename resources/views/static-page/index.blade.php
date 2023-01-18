@@ -194,7 +194,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Let's us help you manage your assignments</h2>
                     <p></p>
-                    <a href="" class="btn btn-main">Contact Us</a>
+                    <a href="https://wa.me/776209846?text=I'm%20interested%20in%20your%services%20for%20writing" class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->
         </div> <!-- End container -->
@@ -257,7 +257,7 @@
                         <div>
                             <span class="counter" data-count="250">0</span>
                         </div>
-                        <h3>Cups of Coffee</h3>
+                        <h3>Recomendations</h3>
                     </div>
                 </div>
                 <!-- end fourth count item -->
@@ -349,7 +349,7 @@
                     <div class="title text-center ">
                         <h2> Latest <span class="color">Posts</span></h2>
                         <div class="border"></div>
-                        <p> Add text</p>
+                        <p> Personal Stories Coming Up Soon</p>
                     </div>
                 </div>
                 <!-- /section title -->
@@ -362,7 +362,7 @@
                         </div>
 
                         <div class="content">
-                            <h3><a href="#">Reasons to Smile</a></h3>
+                            <h3><a href="#">Reasons to Smile</a>Coming Soon</h3>
                             <p></p>
                             <a class="btn btn-main" href="#"></a>
                         </div>
@@ -381,7 +381,7 @@
                         <div class="content">
                             <h3><a href="#">A Few Moments</a></h3>
                             <p></p>
-                            <a class="btn btn-main" href="#">Read more</a>
+                            <a class="btn btn-main" href="#">Coming Soon</a>
                         </div>
                     </div>
                 </article>
