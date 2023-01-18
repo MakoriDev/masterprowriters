@@ -8,7 +8,7 @@
             style="background-image: url({{ asset('images/slider/slider-bg-1.jpg') }});">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-6 align-self-center">
                         <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Helping you better your grades <br>
                         </h1>
                         <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Master pro writers is dedicated offering the best writting services in the industry <br>
@@ -183,7 +183,7 @@
                 </div>
                 <div class="col-md-6">
                     <ul class="checklist">
-                        
+
                     </ul>
                     <a href="#" class="btn btn-main mt-20">Learn More</a>
                 </div>
