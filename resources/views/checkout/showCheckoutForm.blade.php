@@ -25,8 +25,7 @@
                 <div class="col-md-12">
                     <div class="title text-center">
                         <h2>Checkout Order Now</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate facilis eveniet maiores ab
-                            maxime nam ut numquam molestiae quaerat incidunt?</p>
+                        <p></p>
                         <div class="border"></div>
                     </div>
                 </div>
