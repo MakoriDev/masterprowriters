@@ -110,9 +110,7 @@
                     <!-- section title -->
                     <div class="title text-center">
                         <h2>What Do We Offer</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.Lorem ipsum dolor sit amet,
-                            consectetur
-                            adipisicing elit. Voluptates, earum. </p>
+                        <p></p>
                         <div class="border"></div>
                     </div>
                     <!-- /section title -->
@@ -127,32 +125,28 @@
                             <div class="service-item">
                                 <i class="tf-ion-ios-alarm-outline"></i>
                                 <h4>Time Management</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
+                                <p>We offer 24/7 Customer Support</p>
                             </div>
                         </div><!-- END COL -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-item">
                                 <i class="tf-ion-ios-briefcase-outline"></i>
-                                <h4>Marketing Ideas</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
+                                <h4>Course Work</h4>
+                                <p>We can manage your all your class work assignments</p>
                             </div>
                         </div><!-- END COL -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-item">
                                 <i class="tf-ion-ios-email-outline"></i>
-                                <h4>Mail Support</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
+                                <h4>Dissertation Writing</h4>
+                                <p> We will guide you through the process of choosing your research topic, research questions and craft your final thesis</p>
                             </div>
                         </div><!-- END COL -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-item">
                                 <i class="tf-ion-ios-locked-outline"></i>
-                                <h4>Secure System</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui
-                                    venenatis.</p>
+                                <h4>Online Class Management</h4>
+                                <p> Do you have online classes? We provide profesional support with your online classes and exams. We use reknown VPN to avoid being tracked</p>
                             </div>
                         </div><!-- END COL -->
                     </div>
@@ -198,7 +192,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>Let's Create Something Together</h2>
+                    <h2>Let's us help you manage your assignments</h2>
                     <p></p>
                     <a href="" class="btn btn-main">Contact Us</a>
                 </div>
@@ -355,9 +349,7 @@
                     <div class="title text-center ">
                         <h2> Latest <span class="color">Posts</span></h2>
                         <div class="border"></div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus facere accusamus,
-                            reprehenderit libero
-                            inventore nam.</p>
+                        <p> Add text</p>
                     </div>
                 </div>
                 <!-- /section title -->
