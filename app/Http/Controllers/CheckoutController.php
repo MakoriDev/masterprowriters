@@ -24,8 +24,7 @@ class CheckoutController extends Controller
             'cancel_url' => route('cancel-transaction'),
             'id' => $request->number,
             'currency_code' => 'USD',
-            // 'value' => $request->amount
-            'value' => '1.00'
+            'value' => $request->amount
         ];
 
 
