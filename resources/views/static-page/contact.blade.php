@@ -36,7 +36,7 @@
                 <!-- Contact Details -->
                 <div class="contact-details col-md-6 " >
                     <h3>Contact Details</h3>
-                    <p>Phone: +254 796733007</p>
+                    <p>Phone: +254 76209846</p>
                     <ul class="contact-short-info" >
                         <li>
                             <i class="tf-ion-ios-home"></i>
@@ -44,7 +44,7 @@
                         </li>
                         <li>
                             <i class="tf-ion-android-phone-portrait"></i>
-                            <span>Phone: +254 796733007</span>
+                            <span>Phone: +254 776209846</span>
                         </li>
                         <li>
                             <i class="tf-ion-android-globe"></i>
@@ -59,8 +59,8 @@
                     <div class="social-icon">
                         <ul>
                             <li><a href="#"><i class="tf-ion-social-facebook"></i></a></li>
-                            <li><a href="#"><i class="tf-ion-social-twitter"></i></a></li>
-                            <li><a href="#"><i class="tf-ion-social-dribbble-outline"></i></a></li>
+                            <li><a href="https://twitter.com/JanePeterstutor?t=OuAyhLWJoiWUtL0LXLjmuQ&s=09"><i class="tf-ion-social-twitter"></i></a></li>
+                            <li><a href="https://instagram.com/janepeters_tutor?igshid=ZDdkNTZiNTM="><i class="tf-ion-social-dribbble-outline"></i></a></li>
                             <li><a href="#"><i class="tf-ion-social-linkedin-outline"></i></a></li>
                         </ul>
                     </div>

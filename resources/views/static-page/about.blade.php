@@ -97,8 +97,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a tempor eros. Pellentesque elementum
-                        nulla sed justo tempor posuere sit amet sit amet ligula.</h2>
+                    <h2></h2>
                 </div>
             </div> <!-- End row -->
         </div> <!-- End container -->
@@ -179,8 +178,7 @@
                         <div class="member-content">
                             <h3>Michael Jonson</h3>
                             <span>Head Of Marketing</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam,
-                                culpa odio.</p>
+                            <p></p>
                         </div>
                         <!-- /member name & designation -->
 
@@ -212,8 +210,7 @@
                         <div class="member-content">
                             <h3>Carrick Mollenkamp</h3>
                             <span>Web Developer</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam,
-                                culpa odio.</p>
+                            <p></p>
                         </div>
                         <!-- /member name & designation -->
                     </div>
@@ -244,8 +241,7 @@
                         <div class="member-content">
                             <h3>David Gauthier</h3>
                             <span>Head Of Management</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam,
-                                culpa odio.</p>
+                            <p></p>
                         </div>
                         <!-- /member name & designation -->
 
@@ -268,9 +264,7 @@
                 <div class="col-md-12 text-center">
                     <div class="title">
                         <h2>Award-Winning Agency</h2>
-                        <p>Vestibulum nisl tortor, consectetur quis imperdiet bibendum, laoreet sed arcu. Sed condimentum
-                            iaculis ex, in faucibus lorem accumsan non. Donec mattis tincidunt metus. Morbi sed tortor a
-                            risus luctus dignissim.</p>
+                        <p></p>
                     </div>
                 </div>
                 <!-- first count item -->
@@ -335,8 +329,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>Let's Create Something Together</h2>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicudin bibendum auctor, <br> nisi elit
-                        consequat ipsum, nesagittis sem nid elit. Duis sed odio sitain elit.</p>
+                    <p></p>
                     <a href="" class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->

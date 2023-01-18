@@ -179,7 +179,7 @@
                     <ul class="checklist">
 
                     </ul>
-                    <a href="#" class="btn btn-main mt-20">Learn More</a>
+                    <a href="https://emoneycoah.buzz/" class="btn btn-main mt-20">Learn More</a>
                 </div>
             </div> <!-- End row -->
         </div> <!-- End container -->
@@ -194,7 +194,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Let's us help you manage your assignments</h2>
                     <p></p>
-                    <a href="https://wa.me/776209846?text=I'm%20interested%20in%20your%services%20for%20writing" class="btn btn-main">Contact Us</a>
+                    <a href="https://wa.me/776209846?text=I'm%20interested%20in%20your%services" class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->
         </div> <!-- End container -->
