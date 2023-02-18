@@ -194,7 +194,7 @@
                 <div class="col-md-12 text-center">
                     <h2>Let's us help you manage your assignments</h2>
                     <p></p>
-                    <a href="https://wa.me/776209846?text=I'm%20interested%20in%20your%services" class="btn btn-main">Contact Us</a>
+                    <a href="https://wa.me/+18065471021?text=I'm%20interested%20in%20your%services" class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->
         </div> <!-- End container -->
@@ -327,8 +327,8 @@
                                 <img src="{{ asset('images/client-logo/clients-3.jpg') }}" class="img-fluid" alt="">
                             </div>
                             <div class="client-meta">
-                                <h3>Alexander Lucas</h3>
-                                <span>CEO , Company Name</span>
+                                <h3>Jane Peters </h3>
+                                <span>CEO, Master Prowriters </span>
                             </div>
                             <!-- /client photo -->
                         </div>
