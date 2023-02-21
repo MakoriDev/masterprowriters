@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\TestPayPalController;
+use App\Http\Controllers\BlogCategoryController;
 
 //Front pages routes
 Route::get('/', [StaticPageController::class, 'index'])->name('site-root');
@@ -51,6 +52,9 @@ Route::resource('permission', PermissionController::class)->except(['show']);
 Route::resource('role', RoleController::class);
 Route::resource('user', UserController::class)->except(['create', 'store']);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::resource('blog-category', BlogCategoryController::class)->except(['show']);
+Route::resource('blog', BlogController::class);
 
 
 // Testing routes

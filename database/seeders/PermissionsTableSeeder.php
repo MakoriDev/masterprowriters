@@ -22,25 +22,48 @@ class PermissionsTableSeeder extends Seeder
         DB::table('permissions')->delete();
 
         $permissions = [
+            // Permission
             'add permission',
             'edit permission',
             'delete permission',
             'view permission',
+
+            // Role
             'add role',
             'edit role',
             'delete role',
             'view role',
+
+            // User
             'add user',
             'edit user',
             'delete user',
             'view user',
+
+            // Dashboard
             'view dashboard',
+
+            // Orders
             'view all orders',
             'view active orders',
             'view complete orders',
             'view unpaid orders',
             'view order details',
-            'view feedback'
+
+            // Feedback
+            'view feedback',
+
+            // Blog Category
+            'add blog category',
+            'view blog category',
+            'edit blog category',
+            'delete blog category',
+
+            // Blog
+            'add blog',
+            'view blog',
+            'edit blog',
+            'delete blog',
         ];
 
         foreach ($permissions as $permission) {

@@ -60,6 +60,35 @@
 
 
             <li class="nav-item">
+                @canany(['view blog category', 'view blog'])
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-database"></i>
+                        <p>Blogs<i class="right fas fa-angle-left"></i></p>
+                    </a>
+                @endcanany
+
+                <ul class="nav nav-treeview">
+                    @can('view blog category')
+                        <li class="nav-item">
+                            <a href="{{ route('blog-category.index') }}" class="nav-link">
+                                <i class="nav-icon fas fa-asterisk"></i>
+                                <p>Blog Categories</p>
+                            </a>
+                        </li>
+                    @endcan
+
+                    @can('view blog')
+                        <li class="nav-item">
+                            <a href="{{ route('order.active') }}" class="nav-link">
+                                <i class="nav-icon fas fa-asterisk"></i>
+                                <p>Blogs</p>
+                            </a>
+                        </li>
+                    @endcan
+                </ul>
+            </li>
+
+            <li class="nav-item">
                 @can('view feedback')
                     <a href="{{ route('feedback.index') }}" class="nav-link">
                         <i class="nav-icon fas fa-comments"></i>
