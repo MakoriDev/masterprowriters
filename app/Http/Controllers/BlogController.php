@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use Illuminate\Support\Str;
 use App\Models\BlogCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class BlogController extends Controller
 {
@@ -19,8 +21,9 @@ class BlogController extends Controller
     public function create()
     {
         $blogCategories = BlogCategory::all();
+        $blog = new Blog();
 
-        return view('blog.create', compact('blogCategories'));
+        return view('blog.create', compact('blog', 'blogCategories'));
     }
 
     public function store(Request $request)
@@ -40,10 +43,11 @@ class BlogController extends Controller
         $validated['photo'] = '/uploads/blog-photos/' . $fileName;
 
         $validated['created_by'] = Auth::user()->id;
+        $validated['slug'] = Str::slug($validated['title']);
 
         Blog::create($validated);
 
-        return redirect()->to_route('blog.index')->with('success', 'Blog added successfully.');
+        return redirect()->route('blog.index')->with('success', 'Blog added successfully.');
     }
 
     public function edit(Blog $blog)
@@ -62,6 +66,30 @@ class BlogController extends Controller
             'photo' => ['nullable', 'image']
         ]);
 
-        
+        if ($request->hasFile('photo')) {
+            File::delete(public_path("$blog->photo"));
+
+            $file = $request->file('photo');
+            $fileName = $file->getClientOriginalName();
+            $destinationPath = public_path('/uploads/blog-photos/');
+            $file->move($destinationPath, $fileName);
+
+            $validated['photo'] = '/uploads/blog-photos/' . $fileName;
+        }
+
+        $validated['slug'] = Str::slug($validated['title']);
+
+        $blog->update($validated);
+
+        return redirect()->route('blog.index')->with('success', 'Blog updated successfully.');
+
+    }
+
+    public function destroy(Blog $blog)
+    {
+        File::delete(public_path("$blog->photo"));
+        $blog->delete();
+
+        return redirect()->route('blog.index')->with('success', 'Blog deleted successfully.');
     }
 }

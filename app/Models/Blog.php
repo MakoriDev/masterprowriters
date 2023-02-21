@@ -15,4 +15,9 @@ class Blog extends Model
     {
         return $this->belongsTo(BlogCategory::class);
     }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'created_by');
+    }
 }
