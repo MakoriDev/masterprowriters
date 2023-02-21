@@ -20,6 +20,8 @@ Route::get('/', [StaticPageController::class, 'index'])->name('site-root');
 Route::get('about-us', [StaticPageController::class, 'aboutUs'])->name('about-us');
 Route::get('services', [StaticPageController::class, 'services'])->name('services');
 Route::post('redirect-order', [StaticPageController::class, 'order'])->name('redirect-order');
+Route::get('blogs', [StaticPageController::class, 'blogs'])->name('blogs');
+Route::get('single-blog/{blog}', [StaticPageController::class, 'singleBlog'])->name('single-blog');
 
 //Order routes
 Route::resource('order', OrderController::class)->except(['edit','update']);

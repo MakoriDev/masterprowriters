@@ -43,6 +43,7 @@
                                 <th>Category</th>
                                 <th>Image</th>
                                 <th>Title</th>
+                                <th>Excerpt</th>
                                 <th>Author</th>
                                 <th>Created At</th>
                                 @canany(['edit blog', 'delete blog'])
@@ -60,6 +61,7 @@
                                             class="blog-thumbnail">
                                     </td>
                                     <td>{{ $blog->title }}</td>
+                                    <td>{{ $blog->excerpt }}</td>
                                     <td>{{ $blog->author->name }}</td>
                                     <td>{{ $blog->created_at->format('Y-m-d H:i:s') }}</td>
                                     @canany(['edit blog', 'delete blog'])

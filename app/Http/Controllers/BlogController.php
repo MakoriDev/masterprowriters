@@ -31,6 +31,7 @@ class BlogController extends Controller
         $validated = $request->validate([
             'blog_category_id' => ['required', 'integer', 'exists:blog_categories,id'],
             'title' => ['required', 'string', 'max:255'],
+            'excerpt' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'photo' => ['required', 'image']
         ]);
@@ -62,6 +63,7 @@ class BlogController extends Controller
         $validated = $request->validate([
             'blog_category_id' => ['required', 'integer', 'exists:blog_categories,id'],
             'title' => ['required', 'string', 'max:255'],
+            'excerpt' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'photo' => ['nullable', 'image']
         ]);

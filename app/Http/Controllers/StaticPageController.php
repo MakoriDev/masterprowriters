@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class StaticPageController extends Controller
 {
     public function index()
     {
-        return view('static-page.index');
+        $blogs = Blog::latest()->get()->take(3);
+        return view('static-page.index', compact('blogs'));
     }
 
     public function aboutUs()
@@ -36,5 +38,17 @@ class StaticPageController extends Controller
             ->with('spacing', $spacing)
             ->with('level', $level)
             ->with('deadline', $deadline);
+    }
+
+    public function blogs()
+    {
+        $blogs = Blog::paginate(6);
+
+        return view('static-page.blogs', compact('blogs'));
+    }
+
+    public function singleBlog(Blog $blog)
+    {
+        return view('static-page.single-blog', compact('blog'));
     }
 }
