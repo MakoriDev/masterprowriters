@@ -25,7 +25,6 @@ class StaticPageController extends Controller
 
     public function order(Request $request)
     {
-        // dd($request->all());
         $paperType = $request->paper_type;
         $pages = $request->pages;
         $spacing = $request->spacing;
@@ -49,6 +48,7 @@ class StaticPageController extends Controller
 
     public function singleBlog(Blog $blog)
     {
-        return view('static-page.single-blog', compact('blog'));
+        $latestPosts = Blog::latest()->take(3)->get();
+        return view('static-page.single-blog', compact('blog', 'latestPosts'));
     }
 }
