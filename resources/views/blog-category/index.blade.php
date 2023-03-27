@@ -1,17 +1,20 @@
 @extends('layouts.dashboard')
-@section('title', 'Permissions')
+
+@section('title', 'Blog Categories')
+
 @section('css')
     @include('inc.datatable-css')
 @endsection
+
 @section('header-content')
     <div class="row mb-2">
         <div class="col-sm-6">
-            <h1> Permissions</h1>
+            <h1> Blog Categories</h1>
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                <li class="breadcrumb-item active"> Permissions</li>
+                <li class="breadcrumb-item active">Blog Categories</li>
             </ol>
         </div>
     </div>
@@ -20,47 +23,46 @@
 @section('main-content')
 <div class="row">
     <div class="col-12">
+
         <div class="card mb-4">
             <div class="card-header bg-light">
-                <h6 class="card-title">Permissions</h6>
+                <h2 class="card-title"> Blog Categories</h2>
                 <div class="card-tools">
-                    @can('add permission')
-                        <a href="{{ route('permission.create') }}" class="btn btn-sm btn-secondary text-white"><i
-                                class="fas fa-plus mr-2"></i>Add New Permission</a>
+                    @can('add blog category')
+                        <a href="{{ route('blog-category.create') }}" class="btn btn-sm btn-secondary"><i
+                                class="fas fa-plus mr-2"></i>Add New Blog Category</a>
                     @endcan
 
                 </div>
             </div>
             <div class="card-body">
-                <table id="permissions-list" class="table table-sm table-bordered table-hover">
+                <table id="blog-categories-list" class="table table-sm table-bordered table-hover">
                     <thead>
                         <tr>
                             <th>#</th>
                             <th>Name</th>
-                            @canany(['edit permission', 'delete permission'])
+                            @canany(['view blog category', 'edit blog category', 'delete blog category'])
                                 <th>Actions</th>
                             @endcanany
-
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($permissions as $permission)
+                        @foreach ($blogCategories as $blogCategory)
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
-                                <td>{{ $permission->name }}</td>
-                                @canany(['edit permission', 'delete permission'])
+                                <td>{{ $blogCategory->name }}</td>
+                                @canany(['view blog category', 'edit blog category', 'delete blog category'])
                                     <td>
                                         <div class="d-flex">
-                                            @can('edit permission')
-                                                <a href="{{ route('permission.edit', $permission) }}"
+
+                                            @can('edit blog category')
+                                                <a href="{{ route('blog-category.edit', $blogCategory) }}"
                                                     class="btn btn-sm btn-info mr-2"><i
                                                         class="far fa-edit mr-1"></i>Edit</a>
                                             @endcan
 
-
-                                            @can('delete permission')
-                                                <form action="{{ route('permission.destroy', $permission) }}"
-                                                    method="post">
+                                            @can('delete blog category')
+                                                <form action="{{ route('blog-category.destroy', $blogCategory) }}" method="post">
                                                     @csrf
                                                     @method('DELETE')
                                                     <button class="shadow btn btn-sm btn-danger" type="submit">
@@ -71,8 +73,7 @@
 
                                         </div>
                                     </td>
-                                @endcanany
-
+                                @endcanany()
                             </tr>
                         @endforeach
                     </tbody>
@@ -87,13 +88,12 @@
     @include('inc.datatable-js')
     <script>
         $(document).ready(function() {
-            $('#permissions-list').DataTable();
+            $('#blog-categories-list').DataTable();
         });
 
         @if (Session::has('success'))
-            toastr.options =
-            {
-            "progressBar" : true
+            toastr.options = {
+                "progressBar": true
             }
             toastr.success("{{ session('success') }}");
         @endif

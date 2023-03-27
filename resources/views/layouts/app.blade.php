@@ -96,8 +96,8 @@ Fixed Navigation
                         <li class="nav-item {{ Route::is('order.create') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('order.create') }}">Order Now</a>
                         </li>
-                        <li class="nav-item {{ Route::is('order.create') ? 'active' : '' }}">
-                            <a class="nav-link" href="{{ route('order.create') }}">Blogs</a>
+                        <li class="nav-item {{ Route::is('blogs') ? 'active' : '' }}">
+                            <a class="nav-link" href="{{ route('blogs') }}">Blogs</a>
                         </li>
                         <li class="nav-item {{ Route::is('feedback.create') ? 'active' : '' }}">
                             <a class="nav-link " href="{{ route('feedback.create') }}">Contact</a>

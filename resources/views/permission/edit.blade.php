@@ -16,27 +16,25 @@
 @endsection
 
 @section('main-content')
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="card mb-4">
-                    <div class="card-header bg-light">
-                        <h2 class="card-title"><i class="fas fa-edit"></i> Edit Permission</h2>
+<div class="row">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header bg-light">
+                <h2 class="card-title"><i class="fas fa-edit"></i> Edit Permission</h2>
+            </div>
+            <div class="card-body">
+                <form action="{{ route('permission.update', $permission) }}" method="post">
+                    @csrf
+                    @method('PATCH')
+                    @include('permission.form')
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-secondary">
+                            <i class="fas fa-save"></i> Update
+                        </button>
                     </div>
-                    <div class="card-body">
-                        <form action="{{ route('permission.update', $permission) }}" method="post">
-                            @csrf
-                            @method('PATCH')
-                            @include('permission.form')
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-secondary">
-                                    <i class="fas fa-save"></i> Update
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 @endsection

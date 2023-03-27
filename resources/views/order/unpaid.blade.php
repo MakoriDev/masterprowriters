@@ -18,18 +18,6 @@
     </div>
 @endsection
 
-
-*\\
-
-\\magic_quotes_runtime import_request_variables= ide
-
-
-
-  
-
-
-
-
 @section('main-content')
     <div class="row">
         <div class="col-12">

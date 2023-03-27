@@ -3,7 +3,7 @@
 @section('title', 'Homepage')
 
 @section('hero-slider')
-    <div class="hero-slider">
+    {{-- <div class="hero-slider">
         <div class="slider-item th-fullpage hero-area"
             style="background-image: url({{ asset('images/slider/slider-bg-1.jpg') }});">
             <div class="container">
@@ -131,6 +131,37 @@
                 </div>
             </div>
         </div>
+    </div> --}}
+    <div class="hero-slider">
+        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Helping you better your
+                            grades</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Master pro writers is
+                            dedicated offering the best writting services in the industry.</p>
+                        <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
+                            href="{{ route('services') }}">Explore Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-2.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Helping you better your
+                            grades</h1>
+                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Master pro writers is
+                            dedicated offering the best writting services in the industry.
+                        </p>
+                        <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
+                            href="{{ route('services') }}">Explore Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 
@@ -172,14 +203,16 @@
                             <div class="service-item">
                                 <i class="tf-ion-ios-email-outline"></i>
                                 <h4>Dissertation Writing</h4>
-                                <p> We will guide you through the process of choosing your research topic, research questions and craft your final thesis</p>
+                                <p> We will guide you through the process of choosing your research topic, research
+                                    questions and craft your final thesis</p>
                             </div>
                         </div><!-- END COL -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="service-item">
                                 <i class="tf-ion-ios-locked-outline"></i>
                                 <h4>Online Class Management</h4>
-                                <p> Do you have online classes? We provide profesional support with your online classes and exams. We use reknown VPN to avoid being tracked</p>
+                                <p> Do you have online classes? We provide profesional support with your online classes and
+                                    exams. We use reknown VPN to avoid being tracked</p>
                             </div>
                         </div><!-- END COL -->
                     </div>
@@ -189,8 +222,8 @@
     </section> <!-- End section -->
 
     <!--
-                        Start About Section
-                        ==================================== -->
+                                Start About Section
+                                ==================================== -->
     <section class="about-2 section" id="about">
         <div class="container">
             <div class="row">
@@ -219,23 +252,24 @@
     </section> <!-- End section -->
 
     <!--
-                        Start Call To Action
-                        ==================================== -->
+                                Start Call To Action
+                                ==================================== -->
     <section class="call-to-action section">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h2>Let's us help you manage your assignments</h2>
                     <p></p>
-                    <a href="https://wa.me/+18065471021?text=I'm%20interested%20in%20your%services" class="btn btn-main">Contact Us</a>
+                    <a href="https://wa.me/+18065471021?text=I'm%20interested%20in%20your%services"
+                        class="btn btn-main">Contact Us</a>
                 </div>
             </div> <!-- End row -->
         </div> <!-- End container -->
     </section> <!-- End section -->
 
     <!--
-                                Start Counter Section
-                                ==================================== -->
+                                        Start Counter Section
+                                        ==================================== -->
 
     <section class="counter-wrapper section-sm">
         <div class="container">
@@ -299,7 +333,7 @@
     </section> <!-- end section -->
 
     <!-- Start Testimonial
-                        =========================================== -->
+                                =========================================== -->
 
     <section class="testimonial section" id="testimonial">
         <div class="container">
@@ -317,7 +351,8 @@
                             <!-- /client info -->
                             <!-- client photo -->
                             <div class="client-thumb">
-                                <img src="{{ asset('images/client-logo/clients-1.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('images/client-logo/clients-1.jpg') }}" class="img-fluid"
+                                    alt="">
                             </div>
                             <div class="client-meta">
                                 <h3>William Martin</h3>
@@ -337,7 +372,8 @@
                             <!-- /client info -->
                             <!-- client photo -->
                             <div class="client-thumb">
-                                <img src="{{ asset('images/client-logo/clients-2.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('images/client-logo/clients-2.jpg') }}" class="img-fluid"
+                                    alt="">
                             </div>
                             <div class="client-meta">
                                 <h3>Emma Harrison</h3>
@@ -357,7 +393,8 @@
                             <!-- /client info -->
                             <!-- client photo -->
                             <div class="client-thumb">
-                                <img src="{{ asset('images/client-logo/clients-3.jpg') }}" class="img-fluid" alt="">
+                                <img src="{{ asset('images/client-logo/clients-3.jpg') }}" class="img-fluid"
+                                    alt="">
                             </div>
                             <div class="client-meta">
                                 <h3>Jane Peters </h3>
@@ -382,60 +419,30 @@
                     <div class="title text-center ">
                         <h2> Latest <span class="color">Posts</span></h2>
                         <div class="border"></div>
-                        <p> Personal Stories Coming Up Soon</p>
                     </div>
                 </div>
                 <!-- /section title -->
-                <!-- single blog post -->
-                <article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
-                    <div class="post-item">
-                        <div class="media-wrapper">
-                            <img src="{{ asset('images/blog/post-1.jpg') }}" alt="amazing caves coverimage"
-                                class="img-fluid">
-                        </div>
 
-                        <div class="content">
-                            <h3><a href="#">Reasons to Smile</a>Coming Soon</h3>
-                            <p></p>
-                            <a class="btn btn-main" href="#"></a>
-                        </div>
-                    </div>
-                </article>
-                <!-- /single blog post -->
+                @forelse ($blogs as $blog)
+                    <!-- single blog post -->
+                    <article class="col-md-4 col-sm-6 col-xs-12 clearfix ">
+                        <div class="post-item">
+                            <div class="media-wrapper">
+                                <img src="{{ asset($blog->photo) }}" alt="Blog post image." class="img-fluid">
+                            </div>
 
-                <!-- single blog post -->
-                <article class="col-md-4 col-sm-6 col-xs-12 ">
-                    <div class="post-item">
-                        <div class="media-wrapper">
-                            <img src="{{ asset('images/blog/post-2.jpg') }}" alt="amazing caves coverimage"
-                                class="img-fluid">
+                            <div class="content">
+                                <h3><a href="{{ route('single-blog', $blog) }}">{{ $blog->title }}</h3>
+                                <p>{{ $blog->excerpt }}</p>
+                                <a class="btn btn-main" href="{{ route('single-blog', $blog) }}">Read More</a>
+                            </div>
                         </div>
+                    </article>
+                    <!-- /single blog post -->
+                @empty
+                <p>Blog posts coming soon.</p>
+                @endforelse
 
-                        <div class="content">
-                            <h3><a href="#">A Few Moments</a></h3>
-                            <p></p>
-                            <a class="btn btn-main" href="#">Coming Soon</a>
-                        </div>
-                    </div>
-                </article>
-                <!-- end single blog post -->
-
-                <!-- single blog post -->
-                <article class="col-md-4 col-sm-6 col-xs-12 ">
-                    <div class="post-item">
-                        <div class="media-wrapper">
-                            <img src="{{ asset('images/blog/post-3.jpg') }}" alt="amazing caves coverimage"
-                                class="img-fluid">
-                        </div>
-
-                        <div class="content">
-                            <h3><a href="#">Hints for Life</a></h3>
-                            <p></p>
-                            <a class="btn btn-main" href="#">Read more</a>
-                        </div>
-                    </div>
-                </article>
-                <!-- end single blog post -->
             </div> <!-- end row -->
         </div> <!-- end container -->
     </section> <!-- end section -->

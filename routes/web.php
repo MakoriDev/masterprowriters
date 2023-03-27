@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
@@ -12,12 +13,15 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\StaticPageController;
 use App\Http\Controllers\TestPayPalController;
+use App\Http\Controllers\BlogCategoryController;
 
 //Front pages routes
 Route::get('/', [StaticPageController::class, 'index'])->name('site-root');
 Route::get('about-us', [StaticPageController::class, 'aboutUs'])->name('about-us');
 Route::get('services', [StaticPageController::class, 'services'])->name('services');
 Route::post('redirect-order', [StaticPageController::class, 'order'])->name('redirect-order');
+Route::get('blogs', [StaticPageController::class, 'blogs'])->name('blogs');
+Route::get('single-blog/{blog}', [StaticPageController::class, 'singleBlog'])->name('single-blog');
 
 //Order routes
 Route::resource('order', OrderController::class)->except(['edit','update']);
@@ -51,6 +55,9 @@ Route::resource('permission', PermissionController::class)->except(['show']);
 Route::resource('role', RoleController::class);
 Route::resource('user', UserController::class)->except(['create', 'store']);
 Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+Route::resource('blog-category', BlogCategoryController::class)->except(['show']);
+Route::resource('blog', BlogController::class);
 
 
 // Testing routes
