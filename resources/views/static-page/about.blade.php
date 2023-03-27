@@ -74,7 +74,7 @@
                 <!-- section title -->
                 <div class="col-12">
                     <div class="title text-center">
-                        <h2>Our Promo Video</h2>
+                        <h2>Thesis Promo Video</h2>
                         <p></p>
                         <div class="border"></div>
                     </div>
