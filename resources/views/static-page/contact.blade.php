@@ -36,19 +36,19 @@
                 <!-- Contact Details -->
                 <div class="contact-details col-md-6 " >
                     <h3>Contact Details</h3>
-                    <p>Phone: +254 76209846</p>
+                    <p>Phone: +1 (806) 547-1021 </p>
                     <ul class="contact-short-info" >
                         <li>
                             <i class="tf-ion-ios-home"></i>
-                            <span>Yustoo</span>
+                            <span>Jane Peters </span>
                         </li>
                         <li>
                             <i class="tf-ion-android-phone-portrait"></i>
-                            <span>Phone: +254 776209846</span>
+                            <span>Phone: +1 (806) 547-1021 </span>
                         </li>
                         <li>
                             <i class="tf-ion-android-globe"></i>
-                            <span>Fax: +254 79673300</span>
+                            <span>Fax: +1 (806) 547-1021 </span>
                         </li>
                         <li>
                             <i class="tf-ion-android-mail"></i>

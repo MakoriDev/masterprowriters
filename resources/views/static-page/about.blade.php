@@ -81,7 +81,7 @@
                 </div>
                 <!-- /section title -->
                 <div class="col-md-8 mx-auto">
-                    <iframe src="https://player.vimeo.com/video/51119176" width="100%" height="360" frameborder="0"
+                    <iframe src="https://woxo.tech/watch/JX-JuIEvBZA0x" width="100%" height="360" frameborder="0"
                         webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>

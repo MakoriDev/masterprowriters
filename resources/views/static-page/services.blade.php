@@ -83,8 +83,9 @@ If you prepare properly ahead of time, actually writing the proposal shouldn't b
                         </div>
                         <h3>Graphic Design</h3>
                         <p>We offer the best graphic design services. Contact us for;</p>
-                        <li>Posters</li>
-                        <li></li>
+                        Posters, Logos and animations
+            
+    
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -96,7 +97,7 @@ If you prepare properly ahead of time, actually writing the proposal shouldn't b
                             <i class="tf-ion-ios-crop"></i>
                         </div>
                         <h3>Apps Development</h3>
-                        <p></p>
+                        <p>We have a team of expert website developers. If you need a site for your business, or for your coursework project, we are here.</p>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
@@ -107,8 +108,15 @@ If you prepare properly ahead of time, actually writing the proposal shouldn't b
                         <div class="service-icon text-center">
                             <i class="tf-ion-ios-home-outline"></i>
                         </div>
-                        <h3>Networking</h3>
-                        <p></p>
+                        <h3>Other Assignments</h3>
+                        <p>Do you have schook work assignments? Contact us for professional help on the following subjects</p>
+                        <li>Biology
+                            social sciences 
+                            Nursing 
+                            History 
+                            English
+                            Sociology
+                        </li>
                     </div>
                 </div>
                 <!-- End Single Service Item -->
