@@ -16,7 +16,7 @@
 
                     </div>
 
-                    <!-- <div class="col-md-6">
+                     <div class="col-md-6">
                         <div class="card">
                             <div class="card-header">
                                 <h4><i class="fas fa-calculator mr-2"></i>Calculate The Price</h4>
@@ -94,7 +94,7 @@
                         </div>
 
 
-                    </div> -->
+                    </div> 
                     <div class="hero-slider">
 	<div class="slider-item th-fullpage hero-area" style="background-image: url(images/slider/slider-bg-1.jpg);">
 		<div class="container">
@@ -139,8 +139,8 @@
                     <div class="col-md-12 text-center">
                         <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Helping you better your
                             grades</h1>
-                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Master pro writers is
-                            dedicated offering the best writting services in the industry.</p>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Masterpro writers is
+                            dedicated offering the best services in thesis writing.</p>
                         <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn btn-main"
                             href="{{ route('services') }}">Explore Us</a>
                     </div>
@@ -153,8 +153,7 @@
                     <div class="col-md-12 text-center">
                         <h1 data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Helping you better your
                             grades</h1>
-                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">Master pro writers is
-                            dedicated offering the best writting services in the industry.
+                        <p data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".5">We offer 24/7 customer support.
                         </p>
                         <a data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".8" class="btn btn-main"
                             href="{{ route('services') }}">Explore Us</a>

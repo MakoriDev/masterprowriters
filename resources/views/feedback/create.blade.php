@@ -51,7 +51,7 @@
                         </li>
                         <li>
                             <i class="tf-ion-android-phone-portrait"></i>
-                            <span>Phone: +254 79673007 </span>
+                            <span>Phone: +1 806 547 1021 </span>
                         </li>
                         <li>
                             <i class="tf-ion-android-globe"></i>
