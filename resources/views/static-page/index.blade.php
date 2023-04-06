@@ -1,3 +1,9 @@
+<script id="BotPenguin-messenger-widget" src="https://cdn.botpenguin.com/botpenguin.js" defer>642f3caa17488405b7a62a07,642f3c1b5a0f1537e4c4441e</script>
+
+
+
+
+
 @extends('layouts.app')
 
 @section('title', 'Homepage')
@@ -172,7 +178,7 @@
                 <div class="col-12">
                     <!-- section title -->
                     <div class="title text-center">
-                        <h2>What Do We Offer</h2>
+                        <h2>Our Services!</h2>
                         <p></p>
                         <div class="border"></div>
                     </div>
