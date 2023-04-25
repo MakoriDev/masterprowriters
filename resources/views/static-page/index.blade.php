@@ -17,7 +17,7 @@
                     <div class="col-md-6 align-self-center">
                         <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Helping you better your grades <br>
                         </h1>
-                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Master pro writers is dedicated offering the best writting services in the industry <br>
+                        <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Master pro writers is dedicated offering the best thesis writing services in the industry <br>
                              <br> </p>
 
                     </div>

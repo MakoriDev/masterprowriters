@@ -1,12 +1,5 @@
 <script id="BotPenguin-messenger-widget" src="https://cdn.botpenguin.com/botpenguin.js" defer>642f3caa17488405b7a62a07,642f3c1b5a0f1537e4c4441e</script>
 
-
-
-
-
-
-
-
 @extends('layouts.app')
 
 @section('title', 'Contact Us')

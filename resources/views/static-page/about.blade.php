@@ -4,8 +4,6 @@
 
 
 
-//chatbot code
-
 <script id="BotPenguin-messenger-widget" src="https://cdn.botpenguin.com/botpenguin.js" defer>642f3caa17488405b7a62a07,642f3c1b5a0f1537e4c4441e</script>
 
 
@@ -43,10 +41,12 @@
             <div class="row">
                 <div class="col-md-6 mt-20">
                     <h2><br> Master ProWriters</h2>
-                    <p>At masterprowriters we offer the best writing services in dissertations, course work and othe assignments</p>
-                    <p>We have a team of professionals who will handle your orders promptly and with keen detail on instructions. The work is revised by another team of experts that ensures the final work is up to the required standards</p>
-                    <p>We offer the best services in;</p>
-                    <li> Computer Science Assignments </li>
+                    <h6>We are a team of professional writers with a passion for academics. We understand the challenges that come with writing a thesis, and we are here to help you overcome them.We offer comprehensive thesis writing services that cover all aspects of the research and writing process. From proposal development to data analysis, we can help you at every stage of the process.In addition to our thesis writing services, we also offer editing, formatting, and proofreading services to ensure that your document is error-free and ready for submission.Thesis Writing Services was founded in 2013 with the goal of helping students successfully complete their degree. Since then, we have helped hundreds of students from all over the world achieve their academic goals.
+                    <h5>At masterprowriters we offer the best writing services in dissertations, course work and othe assignments</h5>
+                  
+                     <h6>We have a team of professionals who will handle your orders promptly and with keen detail on instructions. The work is revised by another team of experts that ensures the final work is up to the required standards</h6>
+                    <h4>We offer the best services in;</h4>
+                    <h6><li> Computer Science Assignments </li></h6>
                     <li> Bussiness Courses</li>
                     <li> Law exams</li>
                     <li> Pyschology classes</li>
@@ -56,7 +56,7 @@
                     <li> Cyber security </li>
                     <li> History</li>
                     <li> English Literature </li>
-                
+                      </h6>
                 </div>
                 <div class="col-md-6">
                     <img class="img-fluid" src="images/company/company-image.jpg" alt="">
